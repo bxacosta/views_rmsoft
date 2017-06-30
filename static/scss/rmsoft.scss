@@ -1,0 +1,430 @@
+/****************************************************************************************/
+/*								   	Variables Globales	 								*/
+/****************************************************************************************/
+// <--------  Paleta de Colores -------->
+$primario: 				#C12C42;
+$contraste_primario: 	#d1354c;
+$secundario: 			#C9B76A;
+$texto_oscuro: 			#111111;
+$texto_claro: 			#f2f2f2;
+$navbar_principal: 		rgba(0, 0, 0, 0.85);
+$filtro: 				rgba(0, 0, 0, 0.70);
+// <------------ Colores Sistema --------------->
+$background_sistema: 	#fff;//#f5f5f5;
+$background_panel: 		#f5f5f5;
+$navbar_sistema: 		#eee;
+$sidebar: 				rgba(0, 0, 0, 0.85);
+$contraste: 			#343839;
+// <---------------- Fuentes ------------------->
+$fuente_titulo_empresa: Andada, serif;
+// <----------- Imagenes de fondo -------------->
+$imagen_mobil: "../images/fondo-inicio-mobile.jpg";
+$imagen_escritorio: "../images/fondo-inicio-desktop.jpg";
+/****************************************************************************************/
+
+/****************************************************************************************/
+/*								Estilos Globales	 									*/
+/****************************************************************************************/
+html{
+	font-size: 14px;
+}
+body{
+	background-color: $texto_claro;
+	color: $texto_oscuro;
+}
+.panel {
+	margin-bottom: 1rem;
+	padding: 1.2rem 1.6rem;
+	background-color: $background_panel;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+}
+// <----------------- Botones ------------------->
+.boton-ol-principal {
+	color: $texto_claro;
+	background-color: transparent;
+	border-color: $secundario;
+}
+.boton-ol-principal:hover {
+	color: $texto_claro;
+	background-color: $primario;
+}
+.boton-ol-principal:focus {
+	color: $texto_claro;
+	box-shadow: none;
+}
+
+.boton-principal {
+	padding: .5rem 1rem;
+	color: $texto_claro;
+	background-color: $primario;
+}
+.boton-principal:hover {
+	color: $texto_claro;
+	background-color: $contraste_primario;
+	border: 1px solid $secundario;
+}
+.boton-principal:focus {
+	color: $texto_claro;
+	box-shadow: none;
+}
+a {
+	color: $primario;
+}
+a:hover {
+	color: $contraste_primario;
+}
+.form-control:focus {
+    border-color: $secundario;
+}
+// <--------------- Fondos ---------------->
+.background {
+	background: url($imagen_mobil) no-repeat center top;
+	background-size: cover;
+}
+// <--------------- Medias Query ---------------->
+@media (max-width: 576px) {
+	.container-inicio, .container-login {
+		.navbar {
+			.container {
+				margin: 0;
+				margin-left: .5rem;
+			}
+		}
+	}
+}
+/****************************************************************************************/
+
+/****************************************************************************************/
+/*						Estilos Pagina Principal Inicio	 								*/
+/****************************************************************************************/
+.container-inicio, .container-login {
+	padding-top: 2rem;
+	background: $filtro;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	.navbar {
+		background-color: $navbar_principal;
+		color: $texto_claro;
+		padding: 0.6rem 0;
+		.container {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			.marca {
+				display: flex;
+				align-items: center;
+				.logo {
+					width: 3.2rem;
+				}
+				.texto {
+					margin-left: .5rem;
+					text-decoration: none;
+					text-transform: capitalize;
+					color: $texto_claro;
+					font-size: 1.8rem;
+					font-family: $fuente_titulo_empresa;
+				}
+			}
+			.boton-ol-principal {
+				padding: 8px 1.2rem;
+				margin-left: auto;
+				margin-right: 1.8rem;
+			}
+			.boton-menu {
+				border: 0;
+				border-radius: 4px;
+				font-size: 1.8rem;
+				margin: 0;
+				padding: 0 0.7rem;
+				background-color: $primario;
+				color: $texto_claro;
+			}
+			.boton-menu:hover, .boton-menu:focus {
+				outline: none;
+			}
+			.menu {
+				flex: 1 1 100%;
+				ul {
+					padding: 0;
+					list-style: none;
+					margin: 1rem 0 0 0;
+					text-transform: uppercase;
+					li {
+						a {
+							color: $texto_claro;
+							text-decoration: none;
+							display: block;
+							padding: .6rem 0;
+							border-top: 1px solid $secundario;
+						}
+						a:hover {
+							color: $primario;
+						}
+					}
+					li.active{
+						a {
+							color: $primario;
+						}
+					}
+				}
+			}
+		}
+	} //Fin .navbar
+	.principal {
+		margin: auto 0;
+		color: $texto_claro;
+		.container {
+			.denominacion {
+				margin-top: 3.6rem;
+				margin-bottom: 1.4rem;
+				font-size: 2.6rem;
+			}
+			.titulo {
+				font-family: $fuente_titulo_empresa;
+				font-size: 6rem;
+				color: $secundario;
+				margin: 1rem 0;
+			}
+			.descripcion {
+				font-size: 1.4rem;
+				margin-bottom: 3.4rem;
+			}
+			.boton-lg {
+				font-size: 1.3rem;
+				padding: 1rem 1.8rem;
+			}
+		}
+	}//Fin .principal
+	.flecha-bajar { 
+		a {	
+			display: inline-block;
+			font-size: 4rem;
+			color:  $secundario;
+			animation: animacion-flecha-bajar 2s ease-in-out infinite;
+		}
+	}
+}//Fin .container-inicio
+#servicios{
+	background-color: $primario;
+	color: $texto_claro;
+	display: flex;
+	.container {
+		.titulo {
+			margin: 2rem 0;
+		}
+	}
+}
+#contacto{
+	display: flex;
+	.container {
+		.titulo {
+			margin: 2rem 0;
+		}
+	}
+}
+.pie-pagina{
+	background-color: $navbar_principal;
+	color: $texto_claro;
+	padding: 1rem 0;
+	.container {
+		p {
+			margin: 0;
+		}
+	}
+}
+// <------------- Medias Query ---------------->
+// 576px >>>
+@media (min-width: 576px) {
+	.background {
+		background: url($imagen_escritorio) no-repeat center top;
+		background-size: cover;
+	}
+	.container-inicio, .container-login {
+		.navbar {
+			.container {
+				.menu {
+					height: auto !important;
+					display: block;
+					flex: 0 1 30%;
+					ul {
+						display: flex;
+						margin: 0;
+						li {
+							flex: 1 1 100%;
+							a {
+								margin: 0 .4rem;
+								padding: .4rem 0;
+								text-transform: capitalize;
+								border-top: none;
+							}
+							a:hover {
+								color: $primario;
+								border-bottom: 1px solid $secundario;
+							}
+						}
+						li.active{
+							a {
+								color: $primario;
+								border-bottom: 1px solid $secundario;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// 768px <<<
+@media (max-width: 768px) {
+	.container-inicio {
+		.navbar {
+			padding: 0.4rem 0;
+			.container {
+				width: 600px;
+				max-width: 100%;
+			}
+		}
+		.principal .container {
+			.denominacion {
+				margin-top: 1rem;
+				font-size: 2.1rem;
+				margin-bottom: 0;
+			}
+			.titulo {
+				margin: .8rem 0;
+				font-size: 4.6rem;
+			}
+			.descripcion {
+				font-size: 1.1rem;
+				margin-bottom: 2.2rem;
+			}
+			.boton-ol-principal {
+				font-size: 1.2rem;
+				padding: .8rem .8rem;
+			}
+		}
+	}
+}
+// <-------- Animaciones Keyframes ------------>
+@keyframes animacion-flecha-bajar {
+	from {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(6px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+/****************************************************************************************/
+
+/****************************************************************************************/
+/*								Estilos Login y Registro								*/
+/****************************************************************************************/
+.container-login {
+	.principal {
+		.container {
+			.panel {
+				margin: 0;
+				padding: 0;
+				background: transparent;
+				border: 2px solid $secundario;
+				color: $texto_oscuro;
+				display: flex;
+				.logo {
+					background-color: $filtro;
+					border-top-left-radius: 8px;
+					border-bottom-left-radius: 8px;
+					padding: 1rem 2rem;
+					display: flex;
+					justify-content: center;
+					a {
+						align-self: center;
+						width: 200px;
+					}
+				}
+				.contenido {
+					flex: 1 1 auto;
+					background-color: $background_panel;
+					border-left: 2px solid $secundario;
+					border-top-right-radius: 8px;
+					border-bottom-right-radius: 8px;
+					.opciones {
+						display: flex;
+						font-size: 1.2rem;
+						a {
+							flex: 1 1 auto;
+							border: none;
+							text-decoration: none;
+							text-align: center;
+							text-transform: uppercase;
+							padding: 1rem 0;
+							color: $texto_claro;
+							background-color: $primario;
+							transition: all .3s ease;
+						}
+						a:hover {
+							background-color: $contraste_primario;
+							color: $texto_claro;
+						}
+						.register-link {
+							border-top-right-radius: 8px;
+						}
+						.active {
+							color: $primario;
+							background-color: transparent;
+						}
+					}
+					.login, .registro {
+						padding: 0 1rem;
+						padding-top: 2rem;
+						.col-form-label {
+							padding-right: 0;
+						}
+						button {
+							padding: .8rem 0;
+							margin-top: .5rem;
+						}
+					}
+					.registro {
+						padding-top: 1.5rem;
+						button {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// 768px <<<
+@media (max-width: 992px) {
+	.container-login {
+		.principal .container .panel {
+			.logo {
+				background-color: $filtro;
+				padding: 1rem 1.4rem;
+				display: flex;
+				justify-content: center;
+				a {
+					width: 160px;
+				}
+			}
+			.contenido {
+				.opciones {
+					a{
+						padding: 1rem 0;
+					}
+				}
+				.login, .registro {
+					padding: 0 2rem;
+					padding-top: 2rem;
+				}
+			}
+		}
+	}
+}
+/****************************************************************************************/
