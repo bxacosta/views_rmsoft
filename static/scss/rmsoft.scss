@@ -10,9 +10,9 @@ $texto_claro: 			#f2f2f2;
 $navbar_principal: 		rgba(0, 0, 0, 0.85);
 $filtro: 				rgba(0, 0, 0, 0.70);
 // <------------ Colores Sistema --------------->
-$background_sistema: 	#fff;//#f5f5f5;
+$background_sistema: 	#fff;
 $background_panel: 		#f5f5f5;
-$navbar_sistema: 		#eee;
+$navbar_sistema: 		#f5f5f5;
 $sidebar: 				rgba(0, 0, 0, 0.85);
 $contraste: 			#343839;
 // <---------------- Fuentes ------------------->
@@ -20,6 +20,7 @@ $fuente_titulo_empresa: Andada, serif;
 // <----------- Imagenes de fondo -------------->
 $imagen_mobil: "../images/fondo-inicio-mobile.jpg";
 $imagen_escritorio: "../images/fondo-inicio-desktop.jpg";
+$imagen_sidebar: "../images/sidebar.jpg";
 /****************************************************************************************/
 
 /****************************************************************************************/
@@ -29,8 +30,22 @@ html{
 	font-size: 14px;
 }
 body{
-	background-color: $texto_claro;
 	color: $texto_oscuro;
+}
+.marca {
+	display: flex;
+	align-items: center;
+	.logo {
+		width: 3.2rem;
+	}
+	.texto {
+		margin-left: .5rem;
+		text-decoration: none;
+		text-transform: capitalize;
+		color: $texto_claro;
+		font-size: 1.8rem;
+		font-family: $fuente_titulo_empresa;
+	}
 }
 .panel {
 	margin-bottom: 1rem;
@@ -53,7 +68,6 @@ body{
 	color: $texto_claro;
 	box-shadow: none;
 }
-
 .boton-principal {
 	padding: .5rem 1rem;
 	color: $texto_claro;
@@ -68,144 +82,112 @@ body{
 	color: $texto_claro;
 	box-shadow: none;
 }
-a {
-	color: $primario;
-}
-a:hover {
-	color: $contraste_primario;
-}
 .form-control:focus {
-    border-color: $secundario;
-}
-// <--------------- Fondos ---------------->
-.background {
-	background: url($imagen_mobil) no-repeat center top;
-	background-size: cover;
-}
-// <--------------- Medias Query ---------------->
-@media (max-width: 576px) {
-	.container-inicio, .container-login {
-		.navbar {
-			.container {
-				margin: 0;
-				margin-left: .5rem;
-			}
-		}
-	}
+	border-color: $secundario;
 }
 /****************************************************************************************/
 
 /****************************************************************************************/
 /*						Estilos Pagina Principal Inicio	 								*/
 /****************************************************************************************/
-.container-inicio, .container-login {
-	padding-top: 2rem;
-	background: $filtro;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	.navbar {
-		background-color: $navbar_principal;
-		color: $texto_claro;
-		padding: 0.6rem 0;
-		.container {
-			display: flex;
-			align-items: center;
-			flex-wrap: wrap;
-			.marca {
+.background {
+	background: url($imagen_mobil) no-repeat center top;
+	background-size: cover;
+	background-position: center;
+	.container-inicio, .container-login {
+		padding-top: 2rem;
+		background: $filtro;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		.navbar {
+			background-color: $navbar_principal;
+			color: $texto_claro;
+			padding: 0.6rem 0;
+			.container {
 				display: flex;
 				align-items: center;
-				.logo {
-					width: 3.2rem;
+				flex-wrap: wrap;
+				.boton-ol-principal {
+					padding: 8px 1.2rem;
+					margin-left: auto;
+					margin-right: 1.8rem;
 				}
-				.texto {
-					margin-left: .5rem;
-					text-decoration: none;
-					text-transform: capitalize;
-					color: $texto_claro;
+				.boton-menu {
+					border: 0;
+					border-radius: 4px;
 					font-size: 1.8rem;
+					margin: 0;
+					padding: 0 0.7rem;
+					background-color: $primario;
+					color: $texto_claro;
+				}
+				.boton-menu:hover, .boton-menu:focus {
+					outline: none;
+				}
+				.menu {
+					flex: 1 1 100%;
+					ul {
+						padding: 0;
+						list-style: none;
+						margin: 1rem 0 0 0;
+						text-transform: uppercase;
+						li {
+							a {
+								color: $texto_claro;
+								text-decoration: none;
+								display: block;
+								padding: .6rem 0;
+								border-top: 1px solid $secundario;
+							}
+							a:hover {
+								color: $primario;
+							}
+						}
+						li.active{
+							a {
+								color: $primario;
+							}
+						}
+					}
+				}
+			}
+		} //Fin .navbar
+		.principal {
+			margin: auto 0;
+			color: $texto_claro;
+			.container {
+				.denominacion {
+					margin-top: 3.6rem;
+					margin-bottom: 1.4rem;
+					font-size: 2.6rem;
+				}
+				.titulo {
 					font-family: $fuente_titulo_empresa;
+					font-size: 6rem;
+					color: $secundario;
+					margin: 1rem 0;
+				}
+				.descripcion {
+					font-size: 1.4rem;
+					margin-bottom: 3.4rem;
+				}
+				.boton-lg {
+					font-size: 1.3rem;
+					padding: 1rem 1.8rem;
 				}
 			}
-			.boton-ol-principal {
-				padding: 8px 1.2rem;
-				margin-left: auto;
-				margin-right: 1.8rem;
-			}
-			.boton-menu {
-				border: 0;
-				border-radius: 4px;
-				font-size: 1.8rem;
-				margin: 0;
-				padding: 0 0.7rem;
-				background-color: $primario;
-				color: $texto_claro;
-			}
-			.boton-menu:hover, .boton-menu:focus {
-				outline: none;
-			}
-			.menu {
-				flex: 1 1 100%;
-				ul {
-					padding: 0;
-					list-style: none;
-					margin: 1rem 0 0 0;
-					text-transform: uppercase;
-					li {
-						a {
-							color: $texto_claro;
-							text-decoration: none;
-							display: block;
-							padding: .6rem 0;
-							border-top: 1px solid $secundario;
-						}
-						a:hover {
-							color: $primario;
-						}
-					}
-					li.active{
-						a {
-							color: $primario;
-						}
-					}
-				}
+		}//Fin .principal
+		.flecha-bajar { 
+			a {	
+				display: inline-block;
+				font-size: 4rem;
+				color:  $secundario;
+				animation: animacion-flecha-bajar 2s ease-in-out infinite;
 			}
 		}
-	} //Fin .navbar
-	.principal {
-		margin: auto 0;
-		color: $texto_claro;
-		.container {
-			.denominacion {
-				margin-top: 3.6rem;
-				margin-bottom: 1.4rem;
-				font-size: 2.6rem;
-			}
-			.titulo {
-				font-family: $fuente_titulo_empresa;
-				font-size: 6rem;
-				color: $secundario;
-				margin: 1rem 0;
-			}
-			.descripcion {
-				font-size: 1.4rem;
-				margin-bottom: 3.4rem;
-			}
-			.boton-lg {
-				font-size: 1.3rem;
-				padding: 1rem 1.8rem;
-			}
-		}
-	}//Fin .principal
-	.flecha-bajar { 
-		a {	
-			display: inline-block;
-			font-size: 4rem;
-			color:  $secundario;
-			animation: animacion-flecha-bajar 2s ease-in-out infinite;
-		}
-	}
-}//Fin .container-inicio
+	}//Fin .container-inicio
+}
 #servicios{
 	background-color: $primario;
 	color: $texto_claro;
@@ -240,41 +222,42 @@ a:hover {
 	.background {
 		background: url($imagen_escritorio) no-repeat center top;
 		background-size: cover;
-	}
-	.container-inicio, .container-login {
-		.navbar {
-			.container {
-				.menu {
-					height: auto !important;
-					display: block;
-					flex: 0 1 30%;
-					ul {
-						display: flex;
-						margin: 0;
-						li {
-							flex: 1 1 100%;
-							a {
-								margin: 0 .4rem;
-								padding: .4rem 0;
-								text-transform: capitalize;
-								border-top: none;
+		background-position: center;
+		.container-inicio, .container-login {
+			.navbar {
+				.container {
+					.menu {
+						height: auto !important;
+						display: block;
+						flex: 0 1 30%;
+						ul {
+							display: flex;
+							margin: 0;
+							li {
+								flex: 1 1 100%;
+								a {
+									margin: 0 .4rem;
+									padding: .4rem 0;
+									text-transform: capitalize;
+									border-top: none;
+								}
+								a:hover {
+									color: $primario;
+									border-bottom: 1px solid $secundario;
+								}
 							}
-							a:hover {
-								color: $primario;
-								border-bottom: 1px solid $secundario;
-							}
-						}
-						li.active{
-							a {
-								color: $primario;
-								border-bottom: 1px solid $secundario;
+							li.active{
+								a {
+									color: $primario;
+									border-bottom: 1px solid $secundario;
+								}
 							}
 						}
 					}
 				}
 			}
 		}
-	}
+	}		
 }
 // 768px <<<
 @media (max-width: 768px) {
@@ -384,6 +367,12 @@ a:hover {
 						.col-form-label {
 							padding-right: 0;
 						}
+						a {
+							color: $primario;
+						}
+						a:hover {
+							color: $contraste_primario;
+						}
 						button {
 							padding: .8rem 0;
 							margin-top: .5rem;
@@ -424,6 +413,209 @@ a:hover {
 					padding-top: 2rem;
 				}
 			}
+		}
+	}
+}
+/****************************************************************************************/
+
+/****************************************************************************************/
+/*								Estilos pagina Principal								*/
+/****************************************************************************************/
+.container-sistema{
+	background-color: $background_sistema;
+	display: flex;
+	.background-sidebar{
+		background: url($imagen_sidebar) no-repeat center top;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 260px;
+		.sidebar {
+			background: $sidebar;
+			height: 100vh;
+			overflow: auto;
+			width: 260px;
+			.marca {
+				justify-content: center;
+				padding: .6rem 0;
+				margin: 0 2rem;
+				border-bottom: 1px solid $secundario;
+				.logo {
+					width: 2.8rem;
+				}
+				.texto {
+					font-size: 1.6rem;
+				}
+			}
+			.usuario {
+				padding: 1.4rem 1.2rem;
+				border-bottom: 1px solid $secundario;
+				display: flex;
+				justify-content: end;
+				.foto {
+					align-self: center;
+					width: 80px;
+					margin-right: 1.4rem;
+					background-color: $texto_claro;
+					border: 3px solid $secundario;
+				}
+				.texto {
+					align-self: center;
+					flex: 1 1 auto;
+					display: flex;
+					flex-direction: column;
+					.nombre {
+						font-size: 1.2rem;
+						text-decoration: none;
+						color: $texto_claro;
+						margin-bottom: .2rem;
+					}
+					.rol {
+						font-size: .9rem;
+						color: $secundario;
+					}
+				}	
+			}
+			.menu-sidebar {
+				.nav {
+					padding: .8rem 0;
+					li {
+						padding: 0;
+						a {
+							padding: .8rem 0 .8rem 1.4rem;
+							margin: 5px 12px 0px;
+							font-size: 1.1rem;
+							color: $texto_claro;
+							text-decoration: none;
+							display: block;
+							border-radius: 4px;
+						}
+						a:hover {
+							background-color: $contraste;
+							transition: all .2s ease;
+						}
+					}
+					li.active {
+						a {
+							background-color: $primario;
+						}
+					}
+				}
+			}
+		}
+	}
+    .principal {
+    	flex: 1 1 auto;
+    	overflow: auto;
+    	.navbar {
+    		padding: .9rem 0;
+    		background-color: $navbar_sistema;
+    		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    		margin-bottom: 1rem;
+    		.container-fluid {
+    			margin: 0 1rem;
+    			display: flex;
+    			flex-wrap: wrap;
+    			.titulo {
+    				color: $primario;
+    				align-self: center;
+    				margin: 0;
+					font-size: 1.4rem;
+    			}
+    			.menu {
+    				margin-left: auto;
+    				ul {
+    					display: flex;
+    					padding: 0;
+    					margin: 0;
+						list-style: none;
+						li {
+							font-size: 1.05rem;
+							margin-left: 2rem;
+							a {
+								color: $texto_oscuro;
+								text-decoration: none;
+								i {
+									font-size: 1.3rem;
+									color: $primario;
+								}
+								.fa-user {
+									margin: 0 3px;
+								}
+								span {
+									margin-left: .3rem;
+								}
+							}
+							a:hover {
+								color: $contraste_primario;
+							}
+						}
+						li.active{
+							a {
+								color: $primario;
+							}
+						}
+    				}
+    			}
+    		}
+		}
+		.contenido {
+			background-color: $background_sistema;
+			.containe {
+			}
+		}
+    }
+}
+// <------------- Medias Query ---------------->
+// 575px <<<
+@media (max-width: 575px) {
+	.container-sistema .principal .navbar {
+		padding: .5rem 0;
+		.container-fluid .menu {
+			ul {
+				li {
+					padding: .3rem .8rem;
+					margin-left: 1rem;
+					border: 1px solid $primario;
+					border-radius: 6px;
+					a {
+						i{
+							font-size: 1.4rem;
+						}
+					}
+				}
+				li.active{
+					box-shadow: 0 1px 2px $contraste_primario;
+				}
+			}
+		}
+	}
+}
+// 991px <<<
+@media (max-width: 991px) {
+	.container-sistema .background-sidebar{ 
+		width: 180px;
+		.sidebar {
+			width: 180px;
+			.usuario {
+				text-align: center;
+			}
+			.menu-sidebar {
+				.nav li {
+					a {
+						padding: .6rem 0 .6rem 1.2rem;
+					}
+				}
+			}
+		}
+	}
+}
+// 1367px >>>
+@media (min-width: 1367px) {
+	.container-sistema .background-sidebar{ 
+		width: 280px;
+		.sidebar {
+			width: 280px;
 		}
 	}
 }
