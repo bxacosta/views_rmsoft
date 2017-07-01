@@ -357,7 +357,7 @@ body {
   display: -ms-flexbox;
   display: flex; }
   .container-sistema .background-sidebar {
-    background: url("../images/sidebar.jpg") no-repeat center top;
+    background: url("../images/fondo-sidebar.jpg") no-repeat center top;
     background-size: cover;
     background-position: center;
     height: 100vh;
