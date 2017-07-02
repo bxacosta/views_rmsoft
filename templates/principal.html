@@ -75,6 +75,30 @@
                 </div>
             </nav>
             <div class="contenido container-fluid">
+                <div class="alert alert-success fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>ÉXITO: </strong>La acción se ha realizado correctamente.
+                </div>
+                <div class="alert alert-danger fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>ERROR: </strong>La acción no pudo realizarse correctamente.
+                </div>
+                <div class="alert alert-info fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>INFO: </strong>La acción se ha realizado.
+                </div>
+                <div class="alert alert-warning fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>AVISO: </strong>La acción se ha realizado incompleta.
+                </div>
                 <div class="panel">
                     <div class="titulo">
                         <h3>Habitaciones</h3>
@@ -93,38 +117,9 @@
                                     <h4 class="card-title">Nº <span>260</span></h4>
                                     <a href="#" class="estado-text">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        <span>Reservada</span>
+                                        Disponible
                                     </a>
-                                </div>
-                                <div class="descripcion">
-                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
-                                </div>
-                                <div class="fecha-reserva">
-                                    <div class="entrada">Entrada: <span class="zona">GTM-5</span><p class="fecha">12/09/2017 12:43</p></div>
-                                    <div class="salida">Salida: <span class="zona">GTM-5</span><p class="fecha">16/09/2017 12:43</p></div>
-                                </div>
-                                <a href="#" class="btn-reservaciones btn  boton-ol-principal btn-block"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
-                                <div class="accion">
-                                    <p>Reservar Por:</p>
-                                    <div class="reservar">
-                                        <div class="opcion">
-                                            <a href="#" class="btn btn-block boton-principal">Día</a>
-                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
-                                        </div>
-                                        <div class="opcion">
-                                            <a href="#" class="btn btn-block boton-principal">Hora</a>
-                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a>
-                            <a href="#" class="btn-imagen btn btn-secondary btn-block hidden-lg-up">Ver Imagen <i class="fa fa-picture-o" aria-hidden="true"></i></a>
-                            <div class="card-block">
-                                <div class="card-head">
-                                    <h4 class="card-title">Nº <span>260</span></h4>
+                                    <a href="#" class="btn-cancelar btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
                                     <a href="#" class="btn-guardar btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
                                     <select class="estado-selector form-control">
                                         <option>Disponible</option>
@@ -136,55 +131,9 @@
                                 <div class="descripcion">
                                     <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
                                 </div>
-                                <a href="#" class="btn-reservaciones btn  boton-ol-principal btn-block"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
-                                <div class="accion">
-                                    <p>Reservar Por:</p>
-                                    <div class="reservar">
-                                        <div class="opcion">
-                                            <a href="#" class="btn btn-block boton-principal">Hora</a>
-                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a>
-                            <a href="#" class="btn-imagen btn btn-secondary btn-block hidden-lg-up">Ver Imagen <i class="fa fa-picture-o" aria-hidden="true"></i></a>
-                            <div class="card-block">
-                                <div class="card-head">
-                                    <h4 class="card-title">Nº <span>260</span></h4>
-                                    <a href="#" class="estado-text"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Ocupada</a>
-                                </div>
-                                <div class="descripcion">
-                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
-                                </div>
                                 <div class="fecha-reserva">
                                     <div class="entrada">Entrada: <span class="zona">GTM-5</span><p class="fecha">12/09/2017 12:43</p></div>
                                     <div class="salida">Salida: <span class="zona">GTM-5</span><p class="fecha">16/09/2017 12:43</p></div>
-                                </div>
-                                <a href="#" class="btn-reservaciones btn  boton-ol-principal btn-block"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
-                                <div class="accion">
-                                    <p>Reservar Por:</p>
-                                    <div class="reservar">
-                                        <div class="opcion">
-                                            <a href="#" class="btn btn-block boton-principal">Día</a>
-                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a>
-                            <a href="#" class="btn-imagen btn btn-secondary btn-block hidden-lg-up">Ver Imagen <i class="fa fa-picture-o" aria-hidden="true"></i></a>
-                            <div class="card-block">
-                                <div class="card-head">
-                                    <h4 class="card-title">Nº <span>260</span></h4>
-                                    <a href="#" class="estado-text"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Disponible</a>
-                                </div>
-                                <div class="descripcion">
-                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
                                 </div>
                                 <a href="#" class="btn-reservaciones btn  boton-ol-principal btn-block"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
                                 <div class="accion">
@@ -211,6 +160,14 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../static/js/jquery.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
-    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.setTimeout(function() {
+                $(".alert").fadeTo(100, 0).slideUp(500, function(){
+                    $(this).remove(); 
+                });
+            }, 2000);
+        });
+    </script>
 </body>
 </html>

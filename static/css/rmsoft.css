@@ -561,21 +561,6 @@ a:focus {
                     align-self: center;
                 margin: 0;
                 color: #C9B76A; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar {
-                -ms-flex-item-align: center;
-                    align-self: center;
-                padding: .3rem .5rem;
-                margin-right: .2rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar i {
-                  font-size: 1.4rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-selector {
-                -ms-flex-item-align: center;
-                    align-self: center;
-                width: auto;
-                padding: 0 .2rem;
-                height: 2.25rem;
-                color: #C12C42;
-                text-transform: capitalize; }
               .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-text {
                 -ms-flex-item-align: center;
                     align-self: center;
@@ -584,6 +569,24 @@ a:focus {
                 text-transform: uppercase; }
                 .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-text i {
                   margin-right: .1rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar {
+                -ms-flex-item-align: center;
+                    align-self: center;
+                padding: .25rem .45rem;
+                margin-right: .2rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar i {
+                  font-size: 1.4rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-selector {
+                -webkit-box-flex: 1;
+                    -ms-flex: 1 1 auto;
+                        flex: 1 1 auto;
+                -ms-flex-item-align: center;
+                    align-self: center;
+                width: auto;
+                padding: 0 .2rem;
+                height: 2.25rem;
+                color: #C12C42;
+                text-transform: capitalize; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion {
               margin-bottom: .6rem; }
               .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion textarea {
@@ -659,7 +662,12 @@ a:focus {
       border-color: #C12C42;
       border: 2px solid #C12C42;
       -webkit-box-shadow: 0 1px 2px #d1354c;
-              box-shadow: 0 1px 2px #d1354c; } }
+              box-shadow: 0 1px 2px #d1354c; }
+
+  .contenido .panel .cuerpo .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; } }
 @media (max-width: 991px) {
   .container-sistema .background-sidebar {
     width: 180px; }
@@ -669,10 +677,10 @@ a:focus {
         text-align: center; }
       .container-sistema .background-sidebar .sidebar .menu-sidebar .nav li a {
         padding: .6rem 0 .6rem 1.2rem; }
-  .container-sistema .principal .contenido .panel .cuerpo .card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; } }
+  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title {
+    font-size: 1.4rem; }
+  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar {
+    padding: .25rem .4rem; } }
 @media (min-width: 1367px) {
   .container-sistema .background-sidebar {
     width: 280px; }

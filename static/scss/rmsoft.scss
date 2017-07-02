@@ -647,22 +647,6 @@ a:focus {
 									margin: 0;
 									color: $secundario;
 								}
-								.btn-guardar {
-									align-self: center;
-									padding: .3rem .5rem;
-									margin-right: .2rem;
-									i {	
-										font-size: 1.4rem;
-									}
-								}
-								.estado-selector {
-									align-self: center;
-									width: auto;
-									padding: 0 .2rem;
-									height: 2.25rem;
-									color: $primario;
-									text-transform: capitalize;
-								}
 								.estado-text {
 									align-self: center;
 									font-size: 1.1rem;
@@ -671,6 +655,23 @@ a:focus {
 									i {
 										margin-right: .1rem;
 									}
+								}
+								.btn-guardar, .btn-cancelar {
+									align-self: center;
+									padding: .25rem .45rem;
+									margin-right: .2rem;
+									i {	
+										font-size: 1.4rem;
+									}
+								}
+								.estado-selector {
+									flex: 1 1 auto;
+									align-self: center;
+									width: auto;
+									padding: 0 .2rem;
+									height: 2.25rem;
+									color: $primario;
+									text-transform: capitalize;
 								}
 							}
 							.descripcion {
@@ -772,6 +773,11 @@ a:focus {
 			}
 		}
 	}
+	.contenido .panel .cuerpo {
+		.card {
+			flex: 1 1 auto;
+		}
+	}
 }
 // 991px <<<
 @media (max-width: 991px) {
@@ -794,7 +800,16 @@ a:focus {
 		}
 		.principal .contenido .panel .cuerpo {
 			.card {
-				flex: 1 1 auto;
+				.card-block {
+					.card-head {
+						.card-title {
+							font-size: 1.4rem;
+						}
+						.btn-guardar, .btn-cancelar {
+							padding: .25rem .4rem;
+						}
+					}
+				}
 			}
 		}
 	}
