@@ -5,14 +5,18 @@
 $primario: 				#C12C42;
 $contraste_primario: 	#d1354c;
 $secundario: 			#C9B76A;
+$contraste_secundario: 	#ecd778;
 $texto_oscuro: 			#111111;
+$texto_opaco:			#464a4c;
 $texto_claro: 			#f2f2f2;
 $navbar_principal: 		rgba(0, 0, 0, 0.85);
 $filtro: 				rgba(0, 0, 0, 0.70);
 // <------------ Colores Sistema --------------->
 $background_sistema: 	#fff;
-$background_panel: 		#f5f5f5;
-$navbar_sistema: 		#f5f5f5;
+$background_panel: 		#f6f6f6;
+$separador-panel: 		#d2d2d2;
+$titulo-panel: 			#eee;
+$navbar_sistema: 		#eee;
 $sidebar: 				rgba(0, 0, 0, 0.85);
 $contraste: 			#343839;
 // <---------------- Fuentes ------------------->
@@ -21,6 +25,18 @@ $fuente_titulo_empresa: Andada, serif;
 $imagen_mobil: "../images/fondo-inicio-mobile.jpg";
 $imagen_escritorio: "../images/fondo-inicio-desktop.jpg";
 $imagen_sidebar: "../images/fondo-sidebar.jpg";
+// <------------------- Cards ------------------>
+$ancho: 300px;
+// Imagen
+$alto: 165px;
+// Colores
+$background-card: #eee;
+$disponible: #5cb85c;
+$reservada: #2aabd2;
+$ocupada: #c9302c;
+$mantenimiento: #fd9f1d;
+
+
 /****************************************************************************************/
 
 /****************************************************************************************/
@@ -49,11 +65,24 @@ body{
 }
 .panel {
 	margin-bottom: 1rem;
-	padding: 1.2rem 1.6rem;
 	background-color: $background_panel;
-	border-radius: 10px;
+	border-radius: 6px;
+	border: 1px solid rgba(204, 197, 185, 0.5);
 	box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+	display: flex;
+	flex-direction: column;
+	.titulo {
+		padding: .5rem 1rem;
+		border-radius: 6px 6px 0 0;
+		border-bottom: 1px solid $separador-panel;
+		background-color: $titulo-panel;
+	}
+	.cuerpo	{
+		padding: 0.5rem 1rem;
+		display: flex;
+	}
 }
+
 // <----------------- Botones ------------------->
 .boton-ol-principal {
 	color: $texto_claro;
@@ -62,16 +91,18 @@ body{
 }
 .boton-ol-principal:hover {
 	color: $texto_claro;
-	background-color: $primario;
+	border-color: $contraste_secundario;
+	background-color: $contraste_primario;
 }
 .boton-ol-principal:focus {
-	color: $texto_claro;
+	color: $contraste_primario;
 	box-shadow: none;
 }
 .boton-principal {
 	padding: .5rem 1rem;
 	color: $texto_claro;
 	background-color: $primario;
+	border-color: $contraste_primario;
 }
 .boton-principal:hover {
 	color: $texto_claro;
@@ -311,80 +342,84 @@ body{
 	.principal {
 		.container {
 			.panel {
-				margin: 0;
 				padding: 0;
 				background: transparent;
 				border: 2px solid $secundario;
 				color: $texto_oscuro;
-				display: flex;
-				.logo {
-					background-color: $filtro;
-					border-top-left-radius: 8px;
-					border-bottom-left-radius: 8px;
-					padding: 1rem 2rem;
-					display: flex;
-					justify-content: center;
-					a {
-						align-self: center;
-						width: 200px;
-					}
-				}
-				.contenido {
-					flex: 1 1 auto;
-					background-color: $background_panel;
-					border-left: 2px solid $secundario;
-					border-top-right-radius: 8px;
-					border-bottom-right-radius: 8px;
-					.opciones {
+				.cuerpo {
+					padding: 0;
+					.logo {
+						background-color: $filtro;
+						border-top-left-radius: 4px;
+						border-bottom-left-radius: 4px;
+						padding: 1rem 2rem;
 						display: flex;
-						font-size: 1.2rem;
+						justify-content: center;
 						a {
-							flex: 1 1 auto;
-							border: none;
-							text-decoration: none;
-							text-align: center;
-							text-transform: uppercase;
-							padding: 1rem 0;
-							color: $texto_claro;
-							background-color: $primario;
-							transition: all .3s ease;
-						}
-						a:hover {
-							background-color: $contraste_primario;
-							color: $texto_claro;
-						}
-						.register-link {
-							border-top-right-radius: 8px;
-						}
-						.active {
-							color: $primario;
-							background-color: transparent;
+							align-self: center;
+							width: 200px;
 						}
 					}
-					.login, .registro {
-						padding: 0 1rem;
-						padding-top: 2rem;
-						.col-form-label {
-							padding-right: 0;
+					.contenido {
+						flex: 1 1 auto;
+						background-color: $background_panel;
+						border-left: 2px solid $secundario;
+						border-top-right-radius: 4px;
+						border-bottom-right-radius: 4px;
+						.opciones {
+							display: flex;
+							font-size: 1.2rem;
+							a {
+								flex: 1 1 auto;
+								border: none;
+								text-decoration: none;
+								text-align: center;
+								text-transform: uppercase;
+								padding: 1rem 0;
+								color: $texto_claro;
+								background-color: $primario;
+								transition: all .3s ease;
+							}
+							a:hover {
+								background-color: $contraste_primario;
+								color: $texto_claro;
+							}
+							.register-link {
+								border-top-right-radius: 4px;
+							}
+							.active {
+								i {
+									color: $primario;
+								}
+								color: $texto_opaco;
+								background-color: transparent;
+							}
 						}
-						a {
-							color: $primario;
+						.login, .registro {
+							padding: 0 1rem;
+							padding-top: 2rem;
+							.col-form-label {
+								padding-right: 0;
+							}
+							a {
+								color: $primario;
+							}
+							a:hover {
+								color: $contraste_primario;
+							}
+							button {
+								padding: .8rem 0;
+								margin-top: .5rem;
+							}
 						}
-						a:hover {
-							color: $contraste_primario;
-						}
-						button {
-							padding: .8rem 0;
-							margin-top: .5rem;
+						.registro {
+							padding-top: 1.5rem;
+							button {
+								margin-top: 0;
+							}
 						}
 					}
-					.registro {
-						padding-top: 1.5rem;
-						button {
-							margin-top: 0;
-						}
-					}
-				}
+				}	
 			}
 		}
 	}
@@ -392,7 +427,7 @@ body{
 // 768px <<<
 @media (max-width: 992px) {
 	.container-login {
-		.principal .container .panel {
+		.principal .container .panel .cuerpo{
 			.logo {
 				background-color: $filtro;
 				padding: 1rem 1.4rem;
@@ -507,6 +542,7 @@ body{
     .principal {
     	flex: 1 1 auto;
     	overflow: auto;
+    	height: 100vh;
     	.navbar {
     		padding: .9rem 0;
     		background-color: $navbar_sistema;
@@ -517,7 +553,7 @@ body{
     			display: flex;
     			flex-wrap: wrap;
     			.titulo {
-    				color: $primario;
+    				color: $texto_opaco;
     				align-self: center;
     				margin: 0;
 					font-size: 1.4rem;
@@ -561,7 +597,140 @@ body{
 		}
 		.contenido {
 			background-color: $background_sistema;
-			.containe {
+			padding: 0 1rem;
+			.panel {
+				.titulo {
+					display: flex;
+					color: $texto_opaco;
+					h3 {
+						align-self: center;
+						margin: 0;
+						font-size: 1.4rem;
+					}
+					.opciones {
+						align-self: center;
+						margin-left: auto;
+					}
+				}
+				.cuerpo {
+					flex-wrap: wrap;
+					justify-content: space-around;
+					padding: 0;
+					.card {
+						align-self: flex-start;
+						width: $ancho;
+						border-radius: 6px;
+						margin: .5rem;
+						border: 2px solid $secundario;
+						background-color: $background-card; 
+						.card-img-top {
+							width: calc(#{$ancho} - 4px);
+							height: $alto;
+							border-radius: 3px 3px 0 0;
+						}
+						.btn-imagen {
+							background-color: $texto_claro;
+							color: $texto_opaco;
+						}
+						.card-block {
+							padding: .8rem;
+							.card-head {
+								display: flex;
+								flex-wrap: wrap;
+								margin-bottom: .8rem;
+								.card-title {
+									flex: 1 1 auto;
+									align-self: center;
+									margin: 0;
+									color: $secundario;
+								}
+								.btn-guardar {
+									align-self: center;
+									padding: .3rem .5rem;
+									margin-right: .2rem;
+									i {	
+										font-size: 1.4rem;
+									}
+								}
+								.estado {
+									align-self: center;
+									width: auto;
+									padding: 0 .2rem;
+									height: 2.25rem;
+									color: $primario;
+								}
+								.estado-text {
+									align-self: center;
+									color: $primario;
+								}
+							}
+							.descripcion {
+								margin-bottom: .6rem;
+								textarea {
+									background-color: transparent;
+									padding: 0;
+									border: none;
+								}
+							} 
+							.fecha-reserva {
+								color: $primario;
+								display: flex;
+								justify-content: space-between;
+								margin-bottom: .6rem;
+								.fecha {
+									margin: 0;
+									color: $texto_oscuro;
+									font-size: .9rem;
+								}
+								.zona {
+									color: $texto_opaco;
+									font-size: .8rem;
+									font-style: italic;
+								}
+							}
+							.btn-reservaciones {
+								align-self: center;
+								margin: .4rem 0;
+								color: $texto_oscuro;
+								border-color: $secundario;
+								i {
+									color: $primario;
+								}
+							}
+							.btn-reservaciones:hover {
+								color: $texto_claro;
+								i {
+									color: $texto_claro;
+								}
+							}
+							.accion {
+								p {
+									margin-bottom: .25rem;
+								}
+								.reservar {
+									display: flex;
+									flex-wrap: wrap;
+									.opcion {
+										flex: 1 1 auto;
+										margin: .1rem;
+										display: flex;
+										a {	
+											text-transform: capitalize;
+											border-radius: 4px 0 0 4px;
+											padding: .5rem .4rem;
+										}
+										.precio {
+											border: 1px solid $secundario;
+											border-radius: 0 4px 4px 0;
+											padding: .5rem .5rem;
+											color: $texto_opaco;
+										}	
+									}										
+								}
+							}
+						}
+					}
+				}
 			}
 		}
     }
@@ -569,13 +738,14 @@ body{
 // <------------- Medias Query ---------------->
 // 575px <<<
 @media (max-width: 575px) {
-	.container-sistema .principal .navbar {
+	.container-sistema .principal {
+		.navbar {
 		padding: .5rem 0;
 		.container-fluid .menu {
 			ul {
 				li {
 					padding: .3rem .8rem;
-					margin-left: 1rem;
+					margin-left: .8rem;
 					border: 1px solid $primario;
 					border-radius: 6px;
 					a {
@@ -589,23 +759,31 @@ body{
 				}
 			}
 		}
+		}
 	}
 }
 // 991px <<<
 @media (max-width: 991px) {
-	.container-sistema .background-sidebar{ 
-		width: 180px;
-		.sidebar {
+	.container-sistema {
+		.background-sidebar{ 
 			width: 180px;
-			.usuario {
-				text-align: center;
-			}
-			.menu-sidebar {
-				.nav li {
-					a {
-						padding: .6rem 0 .6rem 1.2rem;
+			.sidebar {
+				width: 180px;
+				.usuario {
+					text-align: center;
+				}
+				.menu-sidebar {
+					.nav li {
+						a {
+							padding: .6rem 0 .6rem 1.2rem;
+						}
 					}
 				}
+			}
+		}
+		.principal .contenido .panel .cuerpo {
+			.card {
+				width: 265px;
 			}
 		}
 	}

@@ -30,11 +30,28 @@ body {
 
 .panel {
   margin-bottom: 1rem;
-  padding: 1.2rem 1.6rem;
-  background-color: #f5f5f5;
-  border-radius: 10px;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  border: 1px solid rgba(204, 197, 185, 0.5);
   -webkit-box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-          box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5); }
+          box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .panel .titulo {
+    padding: .5rem 1rem;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid #d2d2d2;
+    background-color: #eee; }
+  .panel .cuerpo {
+    padding: 0.5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .boton-ol-principal {
   color: #f2f2f2;
@@ -43,17 +60,19 @@ body {
 
 .boton-ol-principal:hover {
   color: #f2f2f2;
-  background-color: #C12C42; }
+  border-color: #ecd778;
+  background-color: #d1354c; }
 
 .boton-ol-principal:focus {
-  color: #f2f2f2;
+  color: #d1354c;
   -webkit-box-shadow: none;
           box-shadow: none; }
 
 .boton-principal {
   padding: .5rem 1rem;
   color: #f2f2f2;
-  background-color: #C12C42; }
+  background-color: #C12C42;
+  border-color: #d1354c; }
 
 .boton-principal:hover {
   color: #f2f2f2;
@@ -256,82 +275,82 @@ body {
 /*								Estilos Login y Registro								*/
 /****************************************************************************************/
 .container-login .principal .container .panel {
-  margin: 0;
   padding: 0;
   background: transparent;
   border: 2px solid #C9B76A;
-  color: #111111;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .container-login .principal .container .panel .logo {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding: 1rem 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .container-login .principal .container .panel .logo a {
-      -ms-flex-item-align: center;
-          align-self: center;
-      width: 200px; }
-  .container-login .principal .container .panel .contenido {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    background-color: #f5f5f5;
-    border-left: 2px solid #C9B76A;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px; }
-    .container-login .principal .container .panel .contenido .opciones {
+  color: #111111; }
+  .container-login .principal .container .panel .cuerpo {
+    padding: 0; }
+    .container-login .principal .container .panel .cuerpo .logo {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 1rem 2rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      font-size: 1.2rem; }
-      .container-login .principal .container .panel .contenido .opciones a {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
-        border: none;
-        text-decoration: none;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 1rem 0;
-        color: #f2f2f2;
-        background-color: #C12C42;
-        -webkit-transition: all .3s ease;
-        transition: all .3s ease; }
-      .container-login .principal .container .panel .contenido .opciones a:hover {
-        background-color: #d1354c;
-        color: #f2f2f2; }
-      .container-login .principal .container .panel .contenido .opciones .register-link {
-        border-top-right-radius: 8px; }
-      .container-login .principal .container .panel .contenido .opciones .active {
-        color: #C12C42;
-        background-color: transparent; }
-    .container-login .principal .container .panel .contenido .login, .container-login .principal .container .panel .contenido .registro {
-      padding: 0 1rem;
-      padding-top: 2rem; }
-      .container-login .principal .container .panel .contenido .login .col-form-label, .container-login .principal .container .panel .contenido .registro .col-form-label {
-        padding-right: 0; }
-      .container-login .principal .container .panel .contenido .login a, .container-login .principal .container .panel .contenido .registro a {
-        color: #C12C42; }
-      .container-login .principal .container .panel .contenido .login a:hover, .container-login .principal .container .panel .contenido .registro a:hover {
-        color: #d1354c; }
-      .container-login .principal .container .panel .contenido .login button, .container-login .principal .container .panel .contenido .registro button {
-        padding: .8rem 0;
-        margin-top: .5rem; }
-    .container-login .principal .container .panel .contenido .registro {
-      padding-top: 1.5rem; }
-      .container-login .principal .container .panel .contenido .registro button {
-        margin-top: 0; }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .container-login .principal .container .panel .cuerpo .logo a {
+        -ms-flex-item-align: center;
+            align-self: center;
+        width: 200px; }
+    .container-login .principal .container .panel .cuerpo .contenido {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      background-color: #f6f6f6;
+      border-left: 2px solid #C9B76A;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+      .container-login .principal .container .panel .cuerpo .contenido .opciones {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 1.2rem; }
+        .container-login .principal .container .panel .cuerpo .contenido .opciones a {
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 auto;
+                  flex: 1 1 auto;
+          border: none;
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 1rem 0;
+          color: #f2f2f2;
+          background-color: #C12C42;
+          -webkit-transition: all .3s ease;
+          transition: all .3s ease; }
+        .container-login .principal .container .panel .cuerpo .contenido .opciones a:hover {
+          background-color: #d1354c;
+          color: #f2f2f2; }
+        .container-login .principal .container .panel .cuerpo .contenido .opciones .register-link {
+          border-top-right-radius: 4px; }
+        .container-login .principal .container .panel .cuerpo .contenido .opciones .active {
+          color: #464a4c;
+          background-color: transparent; }
+          .container-login .principal .container .panel .cuerpo .contenido .opciones .active i {
+            color: #C12C42; }
+      .container-login .principal .container .panel .cuerpo .contenido .login, .container-login .principal .container .panel .cuerpo .contenido .registro {
+        padding: 0 1rem;
+        padding-top: 2rem; }
+        .container-login .principal .container .panel .cuerpo .contenido .login .col-form-label, .container-login .principal .container .panel .cuerpo .contenido .registro .col-form-label {
+          padding-right: 0; }
+        .container-login .principal .container .panel .cuerpo .contenido .login a, .container-login .principal .container .panel .cuerpo .contenido .registro a {
+          color: #C12C42; }
+        .container-login .principal .container .panel .cuerpo .contenido .login a:hover, .container-login .principal .container .panel .cuerpo .contenido .registro a:hover {
+          color: #d1354c; }
+        .container-login .principal .container .panel .cuerpo .contenido .login button, .container-login .principal .container .panel .cuerpo .contenido .registro button {
+          padding: .8rem 0;
+          margin-top: .5rem; }
+      .container-login .principal .container .panel .cuerpo .contenido .registro {
+        padding-top: 1.5rem; }
+        .container-login .principal .container .panel .cuerpo .contenido .registro button {
+          margin-top: 0; }
 
 @media (max-width: 992px) {
-  .container-login .principal .container .panel .logo {
+  .container-login .principal .container .panel .cuerpo .logo {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem 1.4rem;
     display: -webkit-box;
@@ -340,11 +359,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .container-login .principal .container .panel .logo a {
+    .container-login .principal .container .panel .cuerpo .logo a {
       width: 160px; }
-  .container-login .principal .container .panel .contenido .opciones a {
+  .container-login .principal .container .panel .cuerpo .contenido .opciones a {
     padding: 1rem 0; }
-  .container-login .principal .container .panel .contenido .login, .container-login .principal .container .panel .contenido .registro {
+  .container-login .principal .container .panel .cuerpo .contenido .login, .container-login .principal .container .panel .cuerpo .contenido .registro {
     padding: 0 2rem;
     padding-top: 2rem; } }
 /****************************************************************************************/
@@ -437,10 +456,11 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    overflow: auto; }
+    overflow: auto;
+    height: 100vh; }
     .container-sistema .principal .navbar {
       padding: .9rem 0;
-      background-color: #f5f5f5;
+      background-color: #eee;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       margin-bottom: 1rem; }
       .container-sistema .principal .navbar .container-fluid {
@@ -451,7 +471,7 @@ body {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
         .container-sistema .principal .navbar .container-fluid .titulo {
-          color: #C12C42;
+          color: #464a4c;
           -ms-flex-item-align: center;
               align-self: center;
           margin: 0;
@@ -483,14 +503,146 @@ body {
             .container-sistema .principal .navbar .container-fluid .menu ul li.active a {
               color: #C12C42; }
     .container-sistema .principal .contenido {
-      background-color: #fff; }
+      background-color: #fff;
+      padding: 0 1rem; }
+      .container-sistema .principal .contenido .panel .titulo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #464a4c; }
+        .container-sistema .principal .contenido .panel .titulo h3 {
+          -ms-flex-item-align: center;
+              align-self: center;
+          margin: 0;
+          font-size: 1.4rem; }
+        .container-sistema .principal .contenido .panel .titulo .opciones {
+          -ms-flex-item-align: center;
+              align-self: center;
+          margin-left: auto; }
+      .container-sistema .principal .contenido .panel .cuerpo {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        padding: 0; }
+        .container-sistema .principal .contenido .panel .cuerpo .card {
+          -ms-flex-item-align: start;
+              align-self: flex-start;
+          width: 300px;
+          border-radius: 6px;
+          margin: .5rem;
+          border: 2px solid #C9B76A;
+          background-color: #eee; }
+          .container-sistema .principal .contenido .panel .cuerpo .card .card-img-top {
+            width: calc(300px - 4px);
+            height: 165px;
+            border-radius: 3px 3px 0 0; }
+          .container-sistema .principal .contenido .panel .cuerpo .card .btn-imagen {
+            background-color: #f2f2f2;
+            color: #464a4c; }
+          .container-sistema .principal .contenido .panel .cuerpo .card .card-block {
+            padding: .8rem; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+              margin-bottom: .8rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title {
+                -webkit-box-flex: 1;
+                    -ms-flex: 1 1 auto;
+                        flex: 1 1 auto;
+                -ms-flex-item-align: center;
+                    align-self: center;
+                margin: 0;
+                color: #C9B76A; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar {
+                -ms-flex-item-align: center;
+                    align-self: center;
+                padding: .3rem .5rem;
+                margin-right: .2rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar i {
+                  font-size: 1.4rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado {
+                -ms-flex-item-align: center;
+                    align-self: center;
+                width: auto;
+                padding: 0 .2rem;
+                height: 2.25rem;
+                color: #C12C42;
+                text-transform: uppercase; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-text {
+                -ms-flex-item-align: center;
+                    align-self: center;
+                color: #C12C42; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion {
+              margin-bottom: .6rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion textarea {
+                background-color: transparent;
+                padding: 0;
+                border: none; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva {
+              color: #C12C42;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between;
+              margin-bottom: .6rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .fecha {
+                margin: 0;
+                color: #111111;
+                font-size: .9rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .zona {
+                color: #464a4c;
+                font-size: .8rem;
+                font-style: italic; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones {
+              -ms-flex-item-align: center;
+                  align-self: center;
+              margin: .4rem 0;
+              color: #111111;
+              border-color: #C9B76A; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones i {
+                color: #C12C42; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones:hover {
+              color: #f2f2f2; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones:hover i {
+                color: #f2f2f2; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion p {
+              margin-bottom: .25rem; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion .reservar {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion .reservar .opcion {
+                -webkit-box-flex: 1;
+                    -ms-flex: 1 1 auto;
+                        flex: 1 1 auto;
+                margin: .1rem;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion .reservar .opcion a {
+                  text-transform: capitalize;
+                  border-radius: 4px 0 0 4px;
+                  padding: .5rem .4rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion .reservar .opcion .precio {
+                  border: 1px solid #C9B76A;
+                  border-radius: 0 4px 4px 0;
+                  padding: .5rem .5rem;
+                  color: #464a4c; }
 
 @media (max-width: 575px) {
   .container-sistema .principal .navbar {
     padding: .5rem 0; }
     .container-sistema .principal .navbar .container-fluid .menu ul li {
       padding: .3rem .8rem;
-      margin-left: 1rem;
+      margin-left: .8rem;
       border: 1px solid #C12C42;
       border-radius: 6px; }
       .container-sistema .principal .navbar .container-fluid .menu ul li a i {
@@ -506,7 +658,9 @@ body {
       .container-sistema .background-sidebar .sidebar .usuario {
         text-align: center; }
       .container-sistema .background-sidebar .sidebar .menu-sidebar .nav li a {
-        padding: .6rem 0 .6rem 1.2rem; } }
+        padding: .6rem 0 .6rem 1.2rem; }
+  .container-sistema .principal .contenido .panel .cuerpo .card {
+    width: 265px; } }
 @media (min-width: 1367px) {
   .container-sistema .background-sidebar {
     width: 280px; }

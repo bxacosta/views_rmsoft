@@ -28,7 +28,7 @@
                     <a href="principal.html" class="texto hidden-xs-down">Libertad</a>
                 </div>
                 <div class="usuario">
-                    <img src="../static/images/usuario.jpg" class="foto rounded-circle hidden-md-down" alt="Usuario">
+                    <img src="../static/images/default-user.jpg" class="foto rounded-circle hidden-md-down" alt="Usuario">
                     <div class="texto">
                         <a href="#" class="nombre">Bryan Acosta</a>
                         <span class="rol">Administrador</span>
@@ -44,6 +44,9 @@
                         </li>
                         <li class="">
                             <a href="#">Habitaciones</a>
+                        </li>
+                        <li class="">
+                            <a href="#">Servicios</a>
                         </li>
                         <li class="">
                             <a href="#">Usuarios</a>
@@ -73,7 +76,159 @@
             </nav>
             <div class="contenido container-fluid">
                 <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae officia laboriosam distinctio ratione optio, expedita quasi vero officiis voluptates illum temporibus, debitis labore eius. Cupiditate labore officiis, quaerat vitae tempore?
+                    <div class="titulo">
+                        <h3>Habitaciones</h3>
+                        <div class="opciones">
+                            <a href="" class="btn btn-outline-primary"><i class="fa fa-th-list" aria-hidden="true"></i> Todas</a>
+                            <a href="" class="btn btn-success"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><span> Disponibles</span></a>
+                        </div>
+                    </div>
+                    <div class="cuerpo">
+                        <!-- Tarjetas Habitaciones-->
+                        <div class="card">
+                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a>
+                            <a href="#" class="btn-imagen btn btn-secondary btn-block hidden-lg-up">Ver Imagen <i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                            <div class="card-block">
+                                <div class="card-head">
+                                    <h4 class="card-title">Nº <span>260</span></h4>
+                                    <a class="btn-guardar btn btn-outline-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <span class="estado-text">Mantenimiento</span>
+                                    <select class="estado form-control">
+                                        <option>Disponible</option>
+                                        <option>Ocupado</option>
+                                        <option>Reservada</option>
+                                        <option>Mantenimiento</option>
+                                    </select>
+                                </div>
+                                <div class="descripcion">
+                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
+                                </div>
+                                <div class="fecha-reserva">
+                                    <div class="entrada">Entrada: <span class="zona">GTM-5</span><p class="fecha">12/09/2017 12:43</p></div>
+                                    <div class="salida">Salida: <span class="zona">GTM-5</span><p class="fecha">16/09/2017 12:43</p></div>
+                                </div>
+                                <a href="#" class="btn-reservaciones btn  boton-ol-principal btn-block"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
+                                <div class="accion">
+                                    <p>Reservar Por:</p>
+                                    <div class="reservar">
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Día</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Hora</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a> 
+                            <div class="card-block">
+                                <div class="informacion">
+                                    <a href="#" class="link-imagen boton-principal hidden-lg-up"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                                    <h4 class="card-title">Nº <span>260</span></h4>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Disponible</option>
+                                        <option>Ocupado</option>
+                                        <option>Reservada</option>
+                                        <option>Mantenimiento</option>
+                                    </select>
+                                    <i class="fa fa-square disponible" aria-hidden="true"></i>
+                                </div>
+                                <div class="descripcion">
+                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
+                                </div>
+                                <div class="fecha-reserva">
+                                    <div class="entrada">Entrada: <span class="zona">GTM-5</span><p class="fecha">12/09/2017 12:43</p></div>
+                                    <div class="salida">Salida: <span class="zona">GTM-5</span><p class="fecha">16/09/2017 12:43</p></div>
+                                </div>
+                                <a href="#" class="btn-ver btn btn-block boton-ol-principal"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
+                                <div class="accion">
+                                    <p>Reservar Por:</p>
+                                    <div class="reservar">
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Día</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Hora</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a> 
+                            <div class="card-block">
+                                <div class="informacion">
+                                    <a href="#" class="link-imagen boton-principal hidden-lg-up"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                                    <h4 class="card-title">Nº <span>260</span></h4>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Disponible</option>
+                                        <option>Ocupado</option>
+                                        <option>Reservada</option>
+                                        <option>Mantenimiento</option>
+                                    </select>
+                                    <i class="fa fa-square disponible" aria-hidden="true"></i>
+                                </div>
+                                <div class="descripcion">
+                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
+                                </div>
+                                <div class="fecha-reserva">
+                                    <div class="entrada">Entrada: <span class="zona">GTM-5</span><p class="fecha">12/09/2017 12:43</p></div>
+                                    <div class="salida">Salida: <span class="zona">GTM-5</span><p class="fecha">16/09/2017 12:43</p></div>
+                                </div>
+                                <a href="#" class="btn-ver btn btn-block boton-ol-principal"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
+                                <div class="accion">
+                                    <p>Reservar Por:</p>
+                                    <div class="reservar">
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Día</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Hora</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="hidden-md-down"><img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"></a> 
+                            <div class="card-block">
+                                <div class="informacion">
+                                    <a href="#" class="link-imagen boton-principal hidden-lg-up"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                                    <h4 class="card-title">Nº <span>260</span></h4>
+                                    <span class="estado">Disponible<i class="fa fa-square disponible" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="descripcion">
+                                    <textarea class="form-control" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
+                                </div>
+                                <div class="fecha-reserva">
+                                    <div class="entrada">Entrada: <span class="zona">GTM-5</span><p class="fecha">12/09/2017 12:43</p></div>
+                                    <div class="salida">Salida: <span class="zona">GTM-5</span><p class="fecha">16/09/2017 12:43</p></div>
+                                </div>
+                                <a href="#" class="btn-ver btn btn-block boton-ol-principal"><i class="fa fa-calendar" aria-hidden="true"></i> Ver Reservaciones</a>
+                                <div class="accion">
+                                    <p>Reservar Por:</p>
+                                    <div class="reservar">
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Día</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                        <div class="opcion">
+                                            <a href="#" class="btn btn-block boton-principal">Hora</a>
+                                            <span class="precio btn" id="btnGroupAddon">$23.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div><!-- Fin .contenido -->
         </div>
