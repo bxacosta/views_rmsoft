@@ -16,7 +16,7 @@ $background_sistema: 	#fff;
 $background_panel: 		#f6f6f6;
 $separador-panel: 		#d2d2d2;
 $titulo-panel: 			#eee;
-$navbar_sistema: 		#eee;
+$navbar_sistema: 		#0e0f12;
 $sidebar: 				rgba(0, 0, 0, 0.85);
 $contraste: 			#343839;
 // <---------------- Fuentes ------------------->
@@ -66,13 +66,13 @@ body{
 .panel {
 	margin-bottom: 1rem;
 	background-color: $background_panel;
-	border-radius: 6px;
+	border-radius: 4px;
 	border: 1px solid rgba(204, 197, 185, 0.5);
 	box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
 	display: flex;
 	flex-direction: column;
 	.titulo {
-		padding: .5rem 1rem;
+		padding: .2rem 1rem;
 		border-radius: 6px 6px 0 0;
 		border-bottom: 1px solid $separador-panel;
 		background-color: $titulo-panel;
@@ -82,22 +82,13 @@ body{
 		display: flex;
 	}
 }
-
-// <----------------- Botones ------------------->
-.boton-ol-principal {
-	color: $texto_claro;
-	background-color: transparent;
+.form-control:focus {
 	border-color: $secundario;
 }
-.boton-ol-principal:hover {
+a:focus {
 	color: $texto_claro;
-	border-color: $contraste_secundario;
-	background-color: $contraste_primario;
 }
-.boton-ol-principal:focus {
-	color: $contraste_primario;
-	box-shadow: none;
-}
+// <----------------- Botones ------------------->
 .boton-principal {
 	padding: .5rem 1rem;
 	color: $texto_claro;
@@ -113,8 +104,19 @@ body{
 	color: $texto_claro;
 	box-shadow: none;
 }
-.form-control:focus {
+.boton-ol-principal {
+	color: $texto_claro;
+	background-color: transparent;
 	border-color: $secundario;
+}
+.boton-ol-principal:hover {
+	color: $texto_claro;
+	border-color: $contraste_secundario;
+	background-color: $contraste_primario;
+}
+.boton-ol-principal:focus {
+	color: $contraste_primario;
+	box-shadow: none;
 }
 /****************************************************************************************/
 
@@ -344,6 +346,7 @@ body{
 			.panel {
 				padding: 0;
 				background: transparent;
+				border-radius: 6px;
 				border: 2px solid $secundario;
 				color: $texto_oscuro;
 				.cuerpo {
@@ -544,7 +547,7 @@ body{
     	overflow: auto;
     	height: 100vh;
     	.navbar {
-    		padding: .9rem 0;
+    		padding: .8rem 0;
     		background-color: $navbar_sistema;
     		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     		margin-bottom: 1rem;
@@ -553,7 +556,7 @@ body{
     			display: flex;
     			flex-wrap: wrap;
     			.titulo {
-    				color: $texto_opaco;
+    				color: $texto_claro;
     				align-self: center;
     				margin: 0;
 					font-size: 1.4rem;
@@ -569,7 +572,7 @@ body{
 							font-size: 1.05rem;
 							margin-left: 2rem;
 							a {
-								color: $texto_oscuro;
+								color: $texto_claro;
 								text-decoration: none;
 								i {
 									font-size: 1.3rem;
@@ -652,16 +655,22 @@ body{
 										font-size: 1.4rem;
 									}
 								}
-								.estado {
+								.estado-selector {
 									align-self: center;
 									width: auto;
 									padding: 0 .2rem;
 									height: 2.25rem;
 									color: $primario;
+									text-transform: capitalize;
 								}
 								.estado-text {
 									align-self: center;
+									font-size: 1.1rem;
 									color: $primario;
+									text-transform: uppercase;
+									i {
+										margin-right: .1rem;
+									}
 								}
 							}
 							.descripcion {
@@ -740,25 +749,27 @@ body{
 @media (max-width: 575px) {
 	.container-sistema .principal {
 		.navbar {
-		padding: .5rem 0;
-		.container-fluid .menu {
-			ul {
-				li {
-					padding: .3rem .8rem;
-					margin-left: .8rem;
-					border: 1px solid $primario;
-					border-radius: 6px;
-					a {
-						i{
-							font-size: 1.4rem;
+			padding: .4rem 0;
+			.container-fluid .menu {
+				ul {
+					li {
+						padding: .3rem .8rem;
+						margin-left: .8rem;
+						border-radius: 6px;
+						a {
+							i{
+								font-size: 1.4rem;
+								color: $texto_claro;
+							}
 						}
 					}
-				}
-				li.active{
-					box-shadow: 0 1px 2px $contraste_primario;
+					li.active{
+						border-color: $primario;
+						border: 2px solid $primario;
+						box-shadow: 0 1px 2px $contraste_primario;
+					}
 				}
 			}
-		}
 		}
 	}
 }
@@ -783,7 +794,7 @@ body{
 		}
 		.principal .contenido .panel .cuerpo {
 			.card {
-				width: 265px;
+				flex: 1 1 auto;
 			}
 		}
 	}
