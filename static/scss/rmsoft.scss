@@ -26,7 +26,7 @@ $imagen_mobil: "../images/fondo-inicio-mobile.jpg";
 $imagen_escritorio: "../images/fondo-inicio-desktop.jpg";
 $imagen_sidebar: "../images/fondo-sidebar.jpg";
 // <------------------- Cards ------------------>
-$ancho: 300px;
+$ancho-card: 300px;
 // Imagen
 $alto: 165px;
 // Colores
@@ -47,6 +47,9 @@ html{
 }
 body{
 	color: $texto_oscuro;
+}
+@font-face { 
+	font-family: 'FontAwesome'; src: local('FontAwesome'); 
 }
 .marca {
 	display: flex;
@@ -86,7 +89,7 @@ body{
 	border-color: $secundario;
 }
 a {
-	color: transparent;
+	color: $texto_claro;
 }
 .fa-trash-o {
 	padding: 0 1.5px;
@@ -116,7 +119,6 @@ a {
 			}
 		}
 		.modal-body {
-			padding: .5rem 0;
 		}
 		.modal-footer {
 			border-top: 1px solid $separador-panel;
@@ -165,7 +167,18 @@ a {
 	height: 5rem;
 	overflow: auto;
 }
-// <----------------- Botones ------------------->
+// <------------ Botones  y enclaces --------------->
+.link-primario {
+	color: $primario;
+}
+.link-primario:hover {
+	color: $contraste_primario;
+	cursor: pointer;
+}
+.link-primario:focus {
+	color: $contraste_primario;
+	text-decoration: none;
+}
 .boton-principal {
 	padding: .5rem 1rem;
 	color: $texto_claro;
@@ -176,6 +189,7 @@ a {
 	color: $texto_claro;
 	background-color: $contraste_primario;
 	border: 1px solid $secundario;
+	cursor: pointer;
 }
 .boton-principal:focus {
 	color: $texto_claro;
@@ -190,6 +204,7 @@ a {
 	color: $texto_claro;
 	border-color: $contraste_secundario;
 	background-color: $contraste_primario;
+	cursor: pointer;
 }
 .boton-ol-principal:focus {
 	color: $contraste_primario;
@@ -481,12 +496,6 @@ a {
 							.col-form-label {
 								padding-right: 0;
 							}
-							a {
-								color: $primario;
-							}
-							a:hover {
-								color: $contraste_primario;
-							}
 							button {
 								padding: .8rem 0;
 								margin-top: .5rem;
@@ -632,14 +641,29 @@ a {
     			margin: 0 1rem;
     			display: flex;
     			flex-wrap: wrap;
-    			.titulo {
-    				color: $texto_claro;
+    			.boton-menu {
     				align-self: center;
+					border: 0;
+					border-radius: 4px;
+					font-size: 1.6rem;
+					margin: 0;
+					padding: 0 0.7rem;
+					background-color: $primario;
+					color: $texto_claro;
+					margin-right: 1rem;
+				}
+				.boton-menu:hover, .boton-menu:focus {
+					outline: none;
+				}
+    			.titulo {
+    				align-self: center;
+    				flex: 1 1 auto;
+    				color: $texto_claro;
     				margin: 0;
 					font-size: 1.4rem;
     			}
     			.menu {
-    				margin-left: auto;
+    				margin: .2rem 0;
     				ul {
     					display: flex;
     					padding: 0;
@@ -674,6 +698,25 @@ a {
     				}
     			}
     		}
+    		#menu-mobil {
+    			ul {
+    				text-align: center;
+    				text-transform: uppercase;
+    				color: $texto_claro !important;
+    				margin: .4rem 0; 
+    				li {
+    					padding: .5rem 0;
+    					a {
+							color: $texto_claro;
+							text-decoration: none;
+    					}
+    				}
+    				li.active {
+    					background-color: $primario;
+    				}
+    			}
+    			
+    		}
 		}
 		.contenido {
 			background-color: $background_sistema;
@@ -693,33 +736,40 @@ a {
 					}
 				}
 				.cuerpo {
+					display: flex;
 					flex-wrap: wrap;
-					justify-content: space-around;
+					justify-content: space-between;
 					padding: 0;
 					.card {
 						align-self: flex-start;
-						width: $ancho;
-						border-radius: 6px;
+						width: $ancho-card;
 						margin: .5rem;
-						border: 2px solid $secundario;
-						background-color: $background-card; 
-						.card-img-top {
-							width: calc(#{$ancho} - 4px);
-							height: $alto;
-							border-radius: 3px 3px 0 0;
-						}
-						.btn-imagen {
-							background-color: $texto_claro;
-							color: $texto_opaco;
+						background-color: $background-card;
+						border-color: transparent;
+						border-radius: 6px;
+						.card-imagen {
+							.card-img-top {
+								width: calc(#{$ancho-card} - 2px);
+								height: $alto;
+								border-radius: 3px 3px 0 0;
+							}
+							.btn-ver-imagen {
+								background-color: $separador-panel;
+								color: $texto_opaco;
+								border-radius: 5px 5px 0 0;
+							}
 						}
 						.card-block {
-							padding: .8rem;
+							padding: .6rem;
+							border: 2px solid;
+							border-color: $separador-panel;
 							.card-head {
 								display: flex;
 								flex-wrap: wrap;
 							 	flex-direction: column;
-								margin-bottom: .8rem;
+								margin-bottom: .6rem;
 								.card-title {
+									margin: 0;
 									display: flex;
 									justify-content: space-between;
 									.numero {
@@ -727,78 +777,76 @@ a {
 										margin: 0;
 										color: $secundario;
 									}
-									.estado-text {
+									.link-primario {
 										align-self: center;
-										font-size: 1.1rem;
 										color: $primario;
 										text-transform: capitalize;
 										h6 {
 											margin: 0;
 											font-size: 1.1rem;
-										}
-										i {
-											margin-right: .1rem;
+											i {
+												margin-right: .15rem;
+											}
 										}
 									}
 									.tipo {
 										align-self: center;
-										margin-left: auto;
 										margin: 0;
-										color: $texto_opaco;
+										color: $secundario;
 									}
 								}
-								.estado {
+								.edit-estado {
 									display: flex;
-									justify-content: space-around;
 									flex-wrap: wrap;
+									margin-top: .4rem;
 									.btn-guardar, .btn-cancelar {
 										align-self: center;
-										padding: .25rem .45rem;
+										padding: .25rem .5rem;
 										margin-right: .2rem;
 										i {	
 											font-size: 1.4rem;
 										}
 									}
-									.estado-selector {
+									.selector {
 										flex: 1 1 auto;
 										align-self: center;
 										width: auto;
 										padding: 0 .2rem;
 										height: 2.25rem;
-										color: $primario;
 										text-transform: capitalize;
 									}
 								}
 							}
-							.descripcion {
-								margin-bottom: .6rem;
-							}
 							.info {
-								margin: .4rem 0;
+								margin-bottom: .4rem;
 								display: flex;
-								justify-content: space-between;
-								.detalle {
-									align-self: center;
-									flex: 1 1 auto;
-									span {
-										margin-left: .4rem;
-									}
-									.piso {
+								flex-direction: column;
+								.info-text {
+									display: flex;
+									justify-content: space-between;
+									.capacidad, .ubicacion {
+										align-self: center;
+										text-transform: capitalize;
 										span {
-											margin-left: .8rem;
+											margin: 0 .3rem;	
 										}
 									}
+									.mas {
+										font-size: 1.2rem;
+									}
 								}
-								.btn-reservaciones {
-									align-self: center;
-									padding: .7rem .5rem;
+							}
+							.ver-reservaciones {
+								margin: .4rem;
+								.btn-ver-reservaciones {
 									color: $texto_oscuro;
 									border-color: $secundario;
 									i {
 										color: $primario;
+										margin-right: .4rem;
 									}
 								}
-								.btn-reservaciones:hover {
+								.btn-ver-reservaciones:hover {
 									color: $texto_claro;
 									i {
 										color: $texto_claro;
@@ -822,7 +870,7 @@ a {
 										color: $texto_oscuro;
 										font-size: .95rem;
 										.zona {
-											margin-left: .4rem;
+											margin-left: .2rem;
 											color: $texto_opaco;
 											font-size: .8rem;
 											font-style: italic;
@@ -832,12 +880,12 @@ a {
 							}
 							.costos {
 								p {
-									margin-bottom: .25rem;
+									margin: .25rem;
 								}
 								.reserva {
 									display: flex;
 									flex-wrap: wrap;
-									.opcion {
+									.precio {
 										flex: 1 1 auto;
 										margin: .1rem;
 										display: flex;
@@ -846,14 +894,14 @@ a {
 											border: 1px solid $primario;
 											text-transform: capitalize;
 											border-radius: 4px 0 0 4px;
-											padding: .5rem .5rem;
+											padding: .25rem .5rem;
 										}
 										.valor {
 											flex: 1 1 auto;	
 											border: 1px  0 solid;
 											border-color: $secundario;
 											border-radius: 0 4px 4px 0;
-											padding: .5rem .5rem;
+											padding: .25rem .5rem;
 											color: $texto_opaco;
 										}	
 									}										
@@ -863,13 +911,16 @@ a {
 						.card-pie {
 							text-transform: uppercase;
 							a {
-								border: none;
 								padding: .6rem 1rem;
 								border-radius: 0 0 4px 4px; 
+							}			
+						}
+					}
+					#modal-ver-reservaciones {
+						.modal-content {
+							.modal-body {
+								padding: .5rem 0;
 							}
-							a:hover {
-								border: none;
-							}				
 						}
 					}
 				}
@@ -883,23 +934,25 @@ a {
 	.container-sistema .principal {
 		.navbar {
 			padding: .4rem 0;
-			.container-fluid .menu {
-				ul {
-					li {
-						padding: .3rem .8rem;
-						margin-left: .8rem;
-						border-radius: 6px;
-						a {
-							i{
-								font-size: 1.4rem;
-								color: $texto_claro;
+			.container-fluid {
+				margin: 0 .2rem;
+				.menu {
+					ul {
+						li {
+							padding: .3rem .6rem;
+							border-radius: 6px;
+							a {
+								i{
+									font-size: 1.4rem;
+									color: $texto_claro;
+								}
 							}
 						}
-					}
-					li.active{
-						border-color: $primario;
-						border: 2px solid $primario;
-						box-shadow: 0 1px 2px $contraste_primario;
+						li.active{
+							border-color: $primario;
+							border: 2px solid $primario;
+							box-shadow: 0 1px 2px $contraste_primario;
+						}
 					}
 				}
 			}
@@ -925,13 +978,26 @@ a {
 				}
 			}
 		}
-		.principal .contenido .panel .cuerpo {
-			.card {
-				flex: 1 1 auto;
-				.card-block {
-					.card-head {
-						.btn-guardar, .btn-cancelar {
-							padding: .25rem .4rem;
+		.principal { 
+			.contenido .panel .cuerpo {
+				.card {
+					flex: 1 1 auto;
+					.card-block {
+						.card-head {
+							.btn-guardar, .btn-cancelar {
+								padding: .25rem .4rem;
+							}
+						}
+					}
+				}
+			}
+			.navbar {
+				.container-fluid {
+					.menu {
+						ul {
+							li {
+								margin-left: .5rem;
+							}
 						}
 					}
 				}

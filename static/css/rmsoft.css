@@ -11,6 +11,9 @@ html {
 body {
   color: #111111; }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: local("FontAwesome"); }
 .marca {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,7 +60,7 @@ body {
   border-color: #C9B76A; }
 
 a {
-  color: transparent; }
+  color: #f2f2f2; }
 
 .fa-trash-o {
   padding: 0 1.5px; }
@@ -90,8 +93,6 @@ a {
       color: #C12C42; }
       .modal-dialog .modal-content .modal-header span {
         margin: 0 .4rem; }
-    .modal-dialog .modal-content .modal-body {
-      padding: .5rem 0; }
     .modal-dialog .modal-content .modal-footer {
       border-top: 1px solid #d2d2d2;
       padding: .5rem; }
@@ -136,6 +137,17 @@ a {
   height: 5rem;
   overflow: auto; }
 
+.link-primario {
+  color: #C12C42; }
+
+.link-primario:hover {
+  color: #d1354c;
+  cursor: pointer; }
+
+.link-primario:focus {
+  color: #d1354c;
+  text-decoration: none; }
+
 .boton-principal {
   padding: .5rem 1rem;
   color: #f2f2f2;
@@ -145,7 +157,8 @@ a {
 .boton-principal:hover {
   color: #f2f2f2;
   background-color: #d1354c;
-  border: 1px solid #C9B76A; }
+  border: 1px solid #C9B76A;
+  cursor: pointer; }
 
 .boton-principal:focus {
   color: #f2f2f2;
@@ -160,7 +173,8 @@ a {
 .boton-ol-principal:hover {
   color: #f2f2f2;
   border-color: #ecd778;
-  background-color: #d1354c; }
+  background-color: #d1354c;
+  cursor: pointer; }
 
 .boton-ol-principal:focus {
   color: #d1354c;
@@ -418,10 +432,6 @@ a {
         padding-top: 2rem; }
         .container-login .principal .container .panel .cuerpo .contenido .login .col-form-label, .container-login .principal .container .panel .cuerpo .contenido .registro .col-form-label {
           padding-right: 0; }
-        .container-login .principal .container .panel .cuerpo .contenido .login a, .container-login .principal .container .panel .cuerpo .contenido .registro a {
-          color: #C12C42; }
-        .container-login .principal .container .panel .cuerpo .contenido .login a:hover, .container-login .principal .container .panel .cuerpo .contenido .registro a:hover {
-          color: #d1354c; }
         .container-login .principal .container .panel .cuerpo .contenido .login button, .container-login .principal .container .panel .cuerpo .contenido .registro button {
           padding: .8rem 0;
           margin-top: .5rem; }
@@ -551,14 +561,30 @@ a {
         display: flex;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-        .container-sistema .principal .navbar .container-fluid .titulo {
-          color: #f2f2f2;
+        .container-sistema .principal .navbar .container-fluid .boton-menu {
           -ms-flex-item-align: center;
               align-self: center;
+          border: 0;
+          border-radius: 4px;
+          font-size: 1.6rem;
+          margin: 0;
+          padding: 0 0.7rem;
+          background-color: #C12C42;
+          color: #f2f2f2;
+          margin-right: 1rem; }
+        .container-sistema .principal .navbar .container-fluid .boton-menu:hover, .container-sistema .principal .navbar .container-fluid .boton-menu:focus {
+          outline: none; }
+        .container-sistema .principal .navbar .container-fluid .titulo {
+          -ms-flex-item-align: center;
+              align-self: center;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 auto;
+                  flex: 1 1 auto;
+          color: #f2f2f2;
           margin: 0;
           font-size: 1.4rem; }
         .container-sistema .principal .navbar .container-fluid .menu {
-          margin-left: auto; }
+          margin: .2rem 0; }
           .container-sistema .principal .navbar .container-fluid .menu ul {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -583,6 +609,18 @@ a {
                 color: #d1354c; }
             .container-sistema .principal .navbar .container-fluid .menu ul li.active a {
               color: #C12C42; }
+      .container-sistema .principal .navbar #menu-mobil ul {
+        text-align: center;
+        text-transform: uppercase;
+        color: #f2f2f2 !important;
+        margin: .4rem 0; }
+        .container-sistema .principal .navbar #menu-mobil ul li {
+          padding: .5rem 0; }
+          .container-sistema .principal .navbar #menu-mobil ul li a {
+            color: #f2f2f2;
+            text-decoration: none; }
+        .container-sistema .principal .navbar #menu-mobil ul li.active {
+          background-color: #C12C42; }
     .container-sistema .principal .contenido {
       background-color: #fff;
       padding: 0 1rem; }
@@ -601,28 +639,35 @@ a {
               align-self: center;
           margin-left: auto; }
       .container-sistema .principal .contenido .panel .cuerpo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 0; }
         .container-sistema .principal .contenido .panel .cuerpo .card {
           -ms-flex-item-align: start;
               align-self: flex-start;
           width: 300px;
-          border-radius: 6px;
           margin: .5rem;
-          border: 2px solid #C9B76A;
-          background-color: #eee; }
-          .container-sistema .principal .contenido .panel .cuerpo .card .card-img-top {
-            width: calc(300px - 4px);
+          background-color: #eee;
+          border-color: transparent;
+          border-radius: 6px; }
+          .container-sistema .principal .contenido .panel .cuerpo .card .card-imagen .card-img-top {
+            width: calc(300px - 2px);
             height: 165px;
             border-radius: 3px 3px 0 0; }
-          .container-sistema .principal .contenido .panel .cuerpo .card .btn-imagen {
-            background-color: #f2f2f2;
-            color: #464a4c; }
+          .container-sistema .principal .contenido .panel .cuerpo .card .card-imagen .btn-ver-imagen {
+            background-color: #d2d2d2;
+            color: #464a4c;
+            border-radius: 5px 5px 0 0; }
           .container-sistema .principal .contenido .panel .cuerpo .card .card-block {
-            padding: .8rem; }
+            padding: .6rem;
+            border: 2px solid;
+            border-color: #d2d2d2; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -633,8 +678,9 @@ a {
               -webkit-box-direction: normal;
                   -ms-flex-direction: column;
                       flex-direction: column;
-              margin-bottom: .8rem; }
+              margin-bottom: .6rem; }
               .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title {
+                margin: 0;
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
@@ -646,39 +692,36 @@ a {
                       align-self: center;
                   margin: 0;
                   color: #C9B76A; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .estado-text {
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .link-primario {
                   -ms-flex-item-align: center;
                       align-self: center;
-                  font-size: 1.1rem;
                   color: #C12C42;
                   text-transform: capitalize; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .estado-text h6 {
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .link-primario h6 {
                     margin: 0;
                     font-size: 1.1rem; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .estado-text i {
-                    margin-right: .1rem; }
+                    .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .link-primario h6 i {
+                      margin-right: .15rem; }
                 .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .tipo {
                   -ms-flex-item-align: center;
                       align-self: center;
-                  margin-left: auto;
                   margin: 0;
-                  color: #464a4c; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado {
+                  color: #C9B76A; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
-                -ms-flex-pack: distribute;
-                    justify-content: space-around;
                 -ms-flex-wrap: wrap;
-                    flex-wrap: wrap; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-cancelar {
+                    flex-wrap: wrap;
+                margin-top: .4rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-cancelar {
                   -ms-flex-item-align: center;
                       align-self: center;
-                  padding: .25rem .45rem;
+                  padding: .25rem .5rem;
                   margin-right: .2rem; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-cancelar i {
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-cancelar i {
                     font-size: 1.4rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .estado-selector {
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .selector {
                   -webkit-box-flex: 1;
                       -ms-flex: 1 1 auto;
                           flex: 1 1 auto;
@@ -687,39 +730,42 @@ a {
                   width: auto;
                   padding: 0 .2rem;
                   height: 2.25rem;
-                  color: #C12C42;
                   text-transform: capitalize; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion {
-              margin-bottom: .6rem; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info {
-              margin: .4rem 0;
+              margin-bottom: .4rem;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
-              -webkit-box-pack: justify;
-                  -ms-flex-pack: justify;
-                      justify-content: space-between; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .detalle {
-                -ms-flex-item-align: center;
-                    align-self: center;
-                -webkit-box-flex: 1;
-                    -ms-flex: 1 1 auto;
-                        flex: 1 1 auto; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .detalle span {
-                  margin-left: .4rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .detalle .piso span {
-                  margin-left: .8rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones {
-                -ms-flex-item-align: center;
-                    align-self: center;
-                padding: .7rem .5rem;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: column;
+                      flex-direction: column; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .capacidad, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .ubicacion {
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  text-transform: capitalize; }
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .capacidad span, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .ubicacion span {
+                    margin: 0 .3rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .mas {
+                  font-size: 1.2rem; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones {
+              margin: .4rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones {
                 color: #111111;
                 border-color: #C9B76A; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones i {
-                  color: #C12C42; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones:hover {
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones i {
+                  color: #C12C42;
+                  margin-right: .4rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones:hover {
                 color: #f2f2f2; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones:hover i {
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones:hover i {
                   color: #f2f2f2; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva {
               color: #C12C42;
@@ -748,19 +794,19 @@ a {
                   color: #111111;
                   font-size: .95rem; }
                   .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada .fecha .zona, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida .fecha .zona {
-                    margin-left: .4rem;
+                    margin-left: .2rem;
                     color: #464a4c;
                     font-size: .8rem;
                     font-style: italic; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos p {
-              margin-bottom: .25rem; }
+              margin: .25rem; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva {
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
               -ms-flex-wrap: wrap;
                   flex-wrap: wrap; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .opcion {
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .precio {
                 -webkit-box-flex: 1;
                     -ms-flex: 1 1 auto;
                         flex: 1 1 auto;
@@ -768,47 +814,47 @@ a {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .opcion .cobro {
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .precio .cobro {
                   -webkit-box-flex: 1;
                       -ms-flex: 1 1 auto;
                           flex: 1 1 auto;
                   border: 1px solid #C12C42;
                   text-transform: capitalize;
                   border-radius: 4px 0 0 4px;
-                  padding: .5rem .5rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .opcion .valor {
+                  padding: .25rem .5rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .precio .valor {
                   -webkit-box-flex: 1;
                       -ms-flex: 1 1 auto;
                           flex: 1 1 auto;
                   border: 1px  0 solid;
                   border-color: #C9B76A;
                   border-radius: 0 4px 4px 0;
-                  padding: .5rem .5rem;
+                  padding: .25rem .5rem;
                   color: #464a4c; }
           .container-sistema .principal .contenido .panel .cuerpo .card .card-pie {
             text-transform: uppercase; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-pie a {
-              border: none;
               padding: .6rem 1rem;
               border-radius: 0 0 4px 4px; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-pie a:hover {
-              border: none; }
+        .container-sistema .principal .contenido .panel .cuerpo #modal-ver-reservaciones .modal-content .modal-body {
+          padding: .5rem 0; }
 
 @media (max-width: 575px) {
   .container-sistema .principal .navbar {
     padding: .4rem 0; }
-    .container-sistema .principal .navbar .container-fluid .menu ul li {
-      padding: .3rem .8rem;
-      margin-left: .8rem;
-      border-radius: 6px; }
-      .container-sistema .principal .navbar .container-fluid .menu ul li a i {
-        font-size: 1.4rem;
-        color: #f2f2f2; }
-    .container-sistema .principal .navbar .container-fluid .menu ul li.active {
-      border-color: #C12C42;
-      border: 2px solid #C12C42;
-      -webkit-box-shadow: 0 1px 2px #d1354c;
-              box-shadow: 0 1px 2px #d1354c; } }
+    .container-sistema .principal .navbar .container-fluid {
+      margin: 0 .2rem; }
+      .container-sistema .principal .navbar .container-fluid .menu ul li {
+        padding: .3rem .6rem;
+        border-radius: 6px; }
+        .container-sistema .principal .navbar .container-fluid .menu ul li a i {
+          font-size: 1.4rem;
+          color: #f2f2f2; }
+      .container-sistema .principal .navbar .container-fluid .menu ul li.active {
+        border-color: #C12C42;
+        border: 2px solid #C12C42;
+        -webkit-box-shadow: 0 1px 2px #d1354c;
+                box-shadow: 0 1px 2px #d1354c; } }
 @media (max-width: 991px) {
   .container-sistema .background-sidebar {
     width: 180px; }
@@ -823,7 +869,9 @@ a {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
     .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar {
-      padding: .25rem .4rem; } }
+      padding: .25rem .4rem; }
+  .container-sistema .principal .navbar .container-fluid .menu ul li {
+    margin-left: .5rem; } }
 @media (min-width: 1367px) {
   .container-sistema .background-sidebar {
     width: 280px; }
