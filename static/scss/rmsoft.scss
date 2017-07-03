@@ -776,15 +776,16 @@ a {
 							.info {
 								margin: .4rem 0;
 								display: flex;
+								justify-content: space-between;
 								.detalle {
 									align-self: center;
 									flex: 1 1 auto;
 									span {
 										margin-left: .4rem;
 									}
-									.cama {
+									.piso {
 										span {
-											margin-left: .6rem;
+											margin-left: .8rem;
 										}
 									}
 								}
@@ -808,7 +809,7 @@ a {
 								color: $primario;
 								display: flex;
 								flex-direction: column;
-								margin-bottom: .6rem;
+								margin: .2rem 0;
 								border: 1px solid $separador-panel;
 								border-radius: .25rem;
 								padding: .2rem .4rem;
@@ -819,7 +820,7 @@ a {
 										align-self: center;
 										margin: 0;
 										color: $texto_oscuro;
-										font-size: .9rem;
+										font-size: .95rem;
 										.zona {
 											margin-left: .4rem;
 											color: $texto_opaco;
@@ -829,24 +830,28 @@ a {
 									}
 								}
 							}
-							.accion {
+							.costos {
 								p {
 									margin-bottom: .25rem;
 								}
-								.reservar {
+								.reserva {
 									display: flex;
 									flex-wrap: wrap;
 									.opcion {
 										flex: 1 1 auto;
 										margin: .1rem;
 										display: flex;
-										a {	
+										.cobro {
+											flex: 1 1 auto;	
+											border: 1px solid $primario;
 											text-transform: capitalize;
 											border-radius: 4px 0 0 4px;
-											padding: .5rem .4rem;
+											padding: .5rem .5rem;
 										}
-										.precio {
-											border: 1px solid $secundario;
+										.valor {
+											flex: 1 1 auto;	
+											border: 1px  0 solid;
+											border-color: $secundario;
 											border-radius: 0 4px 4px 0;
 											padding: .5rem .5rem;
 											color: $texto_opaco;
@@ -854,6 +859,17 @@ a {
 									}										
 								}
 							}
+						}
+						.card-pie {
+							text-transform: uppercase;
+							a {
+								border: none;
+								padding: .6rem 1rem;
+								border-radius: 0 0 4px 4px; 
+							}
+							a:hover {
+								border: none;
+							}				
 						}
 					}
 				}
