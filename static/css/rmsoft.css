@@ -56,8 +56,15 @@ body {
 .form-control:focus {
   border-color: #C9B76A; }
 
-a:focus {
-  color: #f2f2f2; }
+a {
+  color: transparent; }
+
+.fa-trash-o {
+  padding: 0 1.5px; }
+
+.ta-readonly {
+  background-color: transparent !important;
+  padding: 0; }
 
 .modal-dialog {
   min-height: calc(100vh - 60px);
@@ -81,11 +88,53 @@ a:focus {
       border-bottom: 1px solid #d2d2d2;
       padding: .5rem;
       color: #C12C42; }
-      .modal-dialog .modal-content .modal-header .numero-hb {
-        margin-left: .4rem; }
+      .modal-dialog .modal-content .modal-header span {
+        margin: 0 .4rem; }
+    .modal-dialog .modal-content .modal-body {
+      padding: .5rem 0; }
     .modal-dialog .modal-content .modal-footer {
       border-top: 1px solid #d2d2d2;
       padding: .5rem; }
+
+@media (min-width: 992px) {
+  .modal-slg {
+    max-width: 85%; } }
+@media (max-width: 991px) {
+  .modal-slg {
+    max-width: 90%; } }
+@media (max-width: 575px) {
+  .modal-slg {
+    max-width: 95%; } }
+#tab-col-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #tab-col-botones button {
+    margin: 0 .1rem; }
+
+@media (max-width: 575px) {
+  #tab-col-botones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #tab-col-botones button {
+      margin: .1rem 0; } }
+.tab-col-descripccion {
+  height: 5rem;
+  overflow: auto; }
 
 .boton-principal {
   padding: .5rem 1rem;
@@ -580,76 +629,126 @@ a:focus {
               display: flex;
               -ms-flex-wrap: wrap;
                   flex-wrap: wrap;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: column;
+                      flex-direction: column;
               margin-bottom: .8rem; }
               .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title {
-                -webkit-box-flex: 1;
-                    -ms-flex: 1 1 auto;
-                        flex: 1 1 auto;
-                -ms-flex-item-align: center;
-                    align-self: center;
-                margin: 0;
-                color: #C9B76A; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-text {
-                -ms-flex-item-align: center;
-                    align-self: center;
-                font-size: 1.1rem;
-                color: #C12C42;
-                text-transform: uppercase; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-text i {
-                  margin-right: .1rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar {
-                -ms-flex-item-align: center;
-                    align-self: center;
-                padding: .25rem .45rem;
-                margin-right: .2rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar i {
-                  font-size: 1.4rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado-selector {
-                -webkit-box-flex: 1;
-                    -ms-flex: 1 1 auto;
-                        flex: 1 1 auto;
-                -ms-flex-item-align: center;
-                    align-self: center;
-                width: auto;
-                padding: 0 .2rem;
-                height: 2.25rem;
-                color: #C12C42;
-                text-transform: capitalize; }
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .numero {
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  margin: 0;
+                  color: #C9B76A; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .estado-text {
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  font-size: 1.1rem;
+                  color: #C12C42;
+                  text-transform: capitalize; }
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .estado-text h6 {
+                    margin: 0;
+                    font-size: 1.1rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .estado-text i {
+                    margin-right: .1rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .tipo {
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  margin-left: auto;
+                  margin: 0;
+                  color: #464a4c; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                    justify-content: space-around;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-cancelar {
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  padding: .25rem .45rem;
+                  margin-right: .2rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .btn-cancelar i {
+                    font-size: 1.4rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .estado .estado-selector {
+                  -webkit-box-flex: 1;
+                      -ms-flex: 1 1 auto;
+                          flex: 1 1 auto;
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  width: auto;
+                  padding: 0 .2rem;
+                  height: 2.25rem;
+                  color: #C12C42;
+                  text-transform: capitalize; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion {
               margin-bottom: .6rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .descripcion textarea {
-                background-color: transparent;
-                padding: 0;
-                border: none; }
+            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info {
+              margin: .4rem 0;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .detalle {
+                -ms-flex-item-align: center;
+                    align-self: center;
+                -webkit-box-flex: 1;
+                    -ms-flex: 1 1 auto;
+                        flex: 1 1 auto; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .detalle span {
+                  margin-left: .4rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .detalle .cama span {
+                  margin-left: .6rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones {
+                -ms-flex-item-align: center;
+                    align-self: center;
+                padding: .7rem .5rem;
+                color: #111111;
+                border-color: #C9B76A; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones i {
+                  color: #C12C42; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones:hover {
+                color: #f2f2f2; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .btn-reservaciones:hover i {
+                  color: #f2f2f2; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva {
               color: #C12C42;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
-              -webkit-box-pack: justify;
-                  -ms-flex-pack: justify;
-                      justify-content: space-between;
-              margin-bottom: .6rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .fecha {
-                margin: 0;
-                color: #111111;
-                font-size: .9rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .zona {
-                color: #464a4c;
-                font-size: .8rem;
-                font-style: italic; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones {
-              -ms-flex-item-align: center;
-                  align-self: center;
-              margin: .4rem 0;
-              color: #111111;
-              border-color: #C9B76A; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones i {
-                color: #C12C42; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones:hover {
-              color: #f2f2f2; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .btn-reservaciones:hover i {
-                color: #f2f2f2; }
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: column;
+                      flex-direction: column;
+              margin-bottom: .6rem;
+              border: 1px solid #d2d2d2;
+              border-radius: .25rem;
+              padding: .2rem .4rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between; }
+                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada .fecha, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida .fecha {
+                  -ms-flex-item-align: center;
+                      align-self: center;
+                  margin: 0;
+                  color: #111111;
+                  font-size: .9rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada .fecha .zona, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida .fecha .zona {
+                    margin-left: .4rem;
+                    color: #464a4c;
+                    font-size: .8rem;
+                    font-style: italic; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion p {
               margin-bottom: .25rem; }
             .container-sistema .principal .contenido .panel .cuerpo .card .card-block .accion .reservar {
@@ -690,12 +789,7 @@ a:focus {
       border-color: #C12C42;
       border: 2px solid #C12C42;
       -webkit-box-shadow: 0 1px 2px #d1354c;
-              box-shadow: 0 1px 2px #d1354c; }
-
-  .contenido .panel .cuerpo .card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; } }
+              box-shadow: 0 1px 2px #d1354c; } }
 @media (max-width: 991px) {
   .container-sistema .background-sidebar {
     width: 180px; }
@@ -705,10 +799,12 @@ a:focus {
         text-align: center; }
       .container-sistema .background-sidebar .sidebar .menu-sidebar .nav li a {
         padding: .6rem 0 .6rem 1.2rem; }
-  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title {
-    font-size: 1.4rem; }
-  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar {
-    padding: .25rem .4rem; } }
+  .container-sistema .principal .contenido .panel .cuerpo .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+    .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .btn-cancelar {
+      padding: .25rem .4rem; } }
 @media (min-width: 1367px) {
   .container-sistema .background-sidebar {
     width: 280px; }
