@@ -88,6 +88,31 @@ body{
 a:focus {
 	color: $texto_claro;
 }
+.modal-dialog {
+	min-height: calc(100vh - 60px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: auto;
+	@media(max-width: 768px) {
+		min-height: calc(100vh - 20px);
+	}
+	.modal-content {
+		background-color: $background_panel;
+		.modal-header {
+			border-bottom: 1px solid $separador-panel;
+			padding: .5rem;
+			color: $primario;
+			.numero-hb {
+				margin-left: .4rem;
+			}
+		}
+		.modal-footer {
+			border-top: 1px solid $separador-panel;
+			padding: .5rem;
+		}
+	}
+}
 // <----------------- Botones ------------------->
 .boton-principal {
 	padding: .5rem 1rem;
