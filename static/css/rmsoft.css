@@ -37,24 +37,16 @@ body {
   border-radius: 4px;
   border: 1px solid rgba(204, 197, 185, 0.5);
   -webkit-box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-          box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+          box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5); }
   .panel .titulo {
     padding: .2rem 1rem;
     border-radius: 6px 6px 0 0;
     border-bottom: 1px solid #d2d2d2;
     background-color: #eee; }
+    .panel .titulo h3 {
+      padding: .6rem 0; }
   .panel .cuerpo {
-    padding: 0.5rem 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    padding: 0.5rem 1rem; }
 
 .form-control:focus {
   border-color: #C9B76A; }
@@ -106,7 +98,7 @@ a {
 @media (max-width: 575px) {
   .modal-slg {
     max-width: 95%; } }
-#tab-col-botones {
+.tab-col-botones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,11 +108,23 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  #tab-col-botones button {
+  .tab-col-botones button {
+    font-size: 1.2rem;
+    padding: .3rem 1rem;
     margin: 0 .1rem; }
 
+.tab-col-select select {
+  height: 1.45rem !important;
+  padding: 0 .2rem;
+  width: auto; }
+
+.tab-col-input input.form-control {
+  padding: 0 .3rem; }
+.tab-col-input .input-fehca {
+  width: auto; }
+
 @media (max-width: 575px) {
-  #tab-col-botones {
+  .tab-col-botones {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -131,12 +135,8 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    #tab-col-botones button {
+    .tab-col-botones button {
       margin: .1rem 0; } }
-.tab-col-descripccion {
-  height: 5rem;
-  overflow: auto; }
-
 .link-primario {
   color: #C12C42; }
 
@@ -375,7 +375,10 @@ a {
   border: 2px solid #C9B76A;
   color: #111111; }
   .container-login .principal .container .panel .cuerpo {
-    padding: 0; }
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
     .container-login .principal .container .panel .cuerpo .logo {
       background-color: rgba(0, 0, 0, 0.7);
       border-top-left-radius: 4px;
@@ -420,6 +423,8 @@ a {
         .container-login .principal .container .panel .cuerpo .contenido .opciones a:hover {
           background-color: #d1354c;
           color: #f2f2f2; }
+          .container-login .principal .container .panel .cuerpo .contenido .opciones a:hover i {
+            color: #f2f2f2; }
         .container-login .principal .container .panel .cuerpo .contenido .opciones .register-link {
           border-top-right-radius: 4px; }
         .container-login .principal .container .panel .cuerpo .contenido .opciones .active {
@@ -624,218 +629,225 @@ a {
     .container-sistema .principal .contenido {
       background-color: #fff;
       padding: 0 1rem; }
-      .container-sistema .principal .contenido .panel .titulo {
+      .container-sistema .principal .contenido .panel {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        color: #464a4c; }
-        .container-sistema .principal .contenido .panel .titulo h3 {
-          -ms-flex-item-align: center;
-              align-self: center;
-          margin: 0;
-          font-size: 1.4rem; }
-        .container-sistema .principal .contenido .panel .titulo .opciones {
-          -ms-flex-item-align: center;
-              align-self: center;
-          margin-left: auto; }
-      .container-sistema .principal .contenido .panel .cuerpo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        padding: 0; }
-        .container-sistema .principal .contenido .panel .cuerpo .card {
-          -ms-flex-item-align: start;
-              align-self: flex-start;
-          width: 300px;
-          margin: .5rem;
-          background-color: #eee;
-          border-color: transparent;
-          border-radius: 6px; }
-          .container-sistema .principal .contenido .panel .cuerpo .card .card-imagen .card-img-top {
-            width: calc(300px - 2px);
-            height: 165px;
-            border-radius: 3px 3px 0 0; }
-          .container-sistema .principal .contenido .panel .cuerpo .card .card-imagen .btn-ver-imagen {
-            background-color: #d2d2d2;
-            color: #464a4c;
-            border-radius: 5px 5px 0 0; }
-          .container-sistema .principal .contenido .panel .cuerpo .card .card-block {
-            padding: .6rem;
-            border: 2px solid;
-            border-color: #d2d2d2; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -ms-flex-wrap: wrap;
-                  flex-wrap: wrap;
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-                  -ms-flex-direction: column;
-                      flex-direction: column;
-              margin-bottom: .6rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title {
-                margin: 0;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: justify;
-                    -ms-flex-pack: justify;
-                        justify-content: space-between; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .numero {
-                  -ms-flex-item-align: center;
-                      align-self: center;
-                  margin: 0;
-                  color: #C9B76A; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .link-primario {
-                  -ms-flex-item-align: center;
-                      align-self: center;
-                  color: #C12C42;
-                  text-transform: capitalize; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .link-primario h6 {
-                    margin: 0;
-                    font-size: 1.1rem; }
-                    .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .link-primario h6 i {
-                      margin-right: .15rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .card-title .tipo {
-                  -ms-flex-item-align: center;
-                      align-self: center;
-                  margin: 0;
-                  color: #C9B76A; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .container-sistema .principal .contenido .panel .titulo {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          color: #464a4c; }
+          .container-sistema .principal .contenido .panel .titulo h3 {
+            -ms-flex-item-align: center;
+                align-self: center;
+            margin: 0;
+            font-size: 1.4rem; }
+          .container-sistema .principal .contenido .panel .titulo .opciones {
+            -ms-flex-item-align: center;
+                align-self: center;
+            margin-left: auto; }
+        .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card {
+            -ms-flex-item-align: start;
+                align-self: flex-start;
+            width: 300px;
+            margin: .5rem;
+            background-color: #eee;
+            border-color: transparent;
+            border-radius: 6px; }
+            .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-imagen .card-img-top {
+              width: calc(300px - 2px);
+              height: 165px;
+              border-radius: 3px 3px 0 0; }
+            .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-imagen .btn-ver-imagen {
+              background-color: #d2d2d2;
+              color: #464a4c;
+              border-radius: 5px 5px 0 0; }
+            .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block {
+              padding: .6rem;
+              border: 2px solid;
+              border-color: #d2d2d2; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
                 -ms-flex-wrap: wrap;
                     flex-wrap: wrap;
-                margin-top: .4rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-cancelar {
-                  -ms-flex-item-align: center;
-                      align-self: center;
-                  padding: .25rem .5rem;
-                  margin-right: .2rem; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .btn-cancelar i {
-                    font-size: 1.4rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .card-head .edit-estado .selector {
-                  -webkit-box-flex: 1;
-                      -ms-flex: 1 1 auto;
-                          flex: 1 1 auto;
-                  -ms-flex-item-align: center;
-                      align-self: center;
-                  width: auto;
-                  padding: 0 .2rem;
-                  height: 2.25rem;
-                  text-transform: capitalize; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info {
-              margin-bottom: .4rem;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-                  -ms-flex-direction: column;
-                      flex-direction: column; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: justify;
-                    -ms-flex-pack: justify;
-                        justify-content: space-between; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .capacidad, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .ubicacion {
-                  -ms-flex-item-align: center;
-                      align-self: center;
-                  text-transform: capitalize; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .capacidad span, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .ubicacion span {
-                    margin: 0 .3rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .info .info-text .mas {
-                  font-size: 1.2rem; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones {
-              margin: .4rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones {
-                color: #111111;
-                border-color: #C9B76A; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones i {
-                  color: #C12C42;
-                  margin-right: .4rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones:hover {
-                color: #f2f2f2; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .ver-reservaciones .btn-ver-reservaciones:hover i {
-                  color: #f2f2f2; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva {
-              color: #C12C42;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-                  -ms-flex-direction: column;
-                      flex-direction: column;
-              margin: .2rem 0;
-              border: 1px solid #d2d2d2;
-              border-radius: .25rem;
-              padding: .2rem .4rem; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: justify;
-                    -ms-flex-pack: justify;
-                        justify-content: space-between; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada .fecha, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida .fecha {
-                  -ms-flex-item-align: center;
-                      align-self: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                margin-bottom: .6rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .card-title {
                   margin: 0;
-                  color: #111111;
-                  font-size: .95rem; }
-                  .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .entrada .fecha .zona, .container-sistema .principal .contenido .panel .cuerpo .card .card-block .fecha-reserva .salida .fecha .zona {
-                    margin-left: .2rem;
-                    color: #464a4c;
-                    font-size: .8rem;
-                    font-style: italic; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos p {
-              margin: .25rem; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -ms-flex-wrap: wrap;
-                  flex-wrap: wrap; }
-              .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .precio {
-                -webkit-box-flex: 1;
-                    -ms-flex: 1 1 auto;
-                        flex: 1 1 auto;
-                margin: .1rem;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                      -ms-flex-pack: justify;
+                          justify-content: space-between; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .card-title .numero {
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    margin: 0;
+                    color: #C9B76A; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .card-title .link-primario {
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    color: #C12C42;
+                    text-transform: capitalize; }
+                    .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .card-title .link-primario h6 {
+                      margin: 0;
+                      font-size: 1.1rem; }
+                      .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .card-title .link-primario h6 i {
+                        margin-right: .15rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .card-title .tipo {
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    margin: 0;
+                    color: #C9B76A; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .edit-estado {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -ms-flex-wrap: wrap;
+                      flex-wrap: wrap;
+                  margin-top: .4rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .edit-estado .btn-guardar, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .edit-estado .btn-cancelar {
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    padding: .25rem .5rem;
+                    margin-right: .2rem; }
+                    .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .edit-estado .btn-guardar i, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .edit-estado .btn-cancelar i {
+                      font-size: 1.4rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .card-head .edit-estado .selector {
+                    -webkit-box-flex: 1;
+                        -ms-flex: 1 1 auto;
+                            flex: 1 1 auto;
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    width: auto;
+                    padding: 0 .2rem;
+                    height: 2.25rem;
+                    text-transform: capitalize; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info {
+                margin-bottom: .4rem;
                 display: -webkit-box;
                 display: -ms-flexbox;
-                display: flex; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .precio .cobro {
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info .info-text {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                      -ms-flex-pack: justify;
+                          justify-content: space-between; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info .info-text .capacidad, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info .info-text .ubicacion {
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    text-transform: capitalize; }
+                    .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info .info-text .capacidad span, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info .info-text .ubicacion span {
+                      margin: 0 .3rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .info .info-text .mas {
+                    font-size: 1.2rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .ver-reservaciones {
+                margin: .4rem 0; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .ver-reservaciones .btn-ver-reservaciones {
+                  color: #111111;
+                  border-color: #C9B76A; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .ver-reservaciones .btn-ver-reservaciones i {
+                    color: #C12C42;
+                    margin-right: .4rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .ver-reservaciones .btn-ver-reservaciones:hover {
+                  color: #f2f2f2; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .ver-reservaciones .btn-ver-reservaciones:hover i {
+                    color: #f2f2f2; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva {
+                color: #C12C42;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                margin: .2rem 0;
+                border: 1px solid #d2d2d2;
+                border-radius: .25rem;
+                padding: .2rem .4rem; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva .entrada, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva .salida {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                      -ms-flex-pack: justify;
+                          justify-content: space-between; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva .entrada .fecha, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva .salida .fecha {
+                    -ms-flex-item-align: center;
+                        align-self: center;
+                    margin: 0;
+                    color: #111111;
+                    font-size: .95rem; }
+                    .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva .entrada .fecha .zona, .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .fecha-reserva .salida .fecha .zona {
+                      margin-left: .2rem;
+                      color: #464a4c;
+                      font-size: .8rem;
+                      font-style: italic; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .costos p {
+                margin: .25rem; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .costos .reserva {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap; }
+                .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .costos .reserva .precio {
                   -webkit-box-flex: 1;
                       -ms-flex: 1 1 auto;
                           flex: 1 1 auto;
-                  border: 1px solid #C12C42;
-                  text-transform: capitalize;
-                  border-radius: 4px 0 0 4px;
-                  padding: .25rem .5rem; }
-                .container-sistema .principal .contenido .panel .cuerpo .card .card-block .costos .reserva .precio .valor {
-                  -webkit-box-flex: 1;
-                      -ms-flex: 1 1 auto;
-                          flex: 1 1 auto;
-                  border: 1px  0 solid;
-                  border-color: #C9B76A;
-                  border-radius: 0 4px 4px 0;
-                  padding: .25rem .5rem;
-                  color: #464a4c; }
-          .container-sistema .principal .contenido .panel .cuerpo .card .card-pie {
-            text-transform: uppercase; }
-            .container-sistema .principal .contenido .panel .cuerpo .card .card-pie a {
-              padding: .6rem 1rem;
-              border-radius: 0 0 4px 4px; }
+                  margin: .1rem;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .costos .reserva .precio .cobro {
+                    -webkit-box-flex: 1;
+                        -ms-flex: 1 1 auto;
+                            flex: 1 1 auto;
+                    border: 1px solid #C12C42;
+                    text-transform: capitalize;
+                    border-radius: 4px 0 0 4px;
+                    padding: .25rem .5rem; }
+                  .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-block .costos .reserva .precio .valor {
+                    -webkit-box-flex: 1;
+                        -ms-flex: 1 1 auto;
+                            flex: 1 1 auto;
+                    border: 1px  0 solid;
+                    border-color: #C9B76A;
+                    border-radius: 0 4px 4px 0;
+                    padding: .25rem .5rem;
+                    color: #464a4c; }
+            .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-pie {
+              text-transform: uppercase; }
+              .container-sistema .principal .contenido .panel .cuerpo .contenedor-cards .card .card-pie a {
+                padding: .6rem 1rem;
+                border-radius: 0 0 4px 4px; }
         .container-sistema .principal .contenido .panel .cuerpo #modal-ver-reservaciones .modal-content .modal-body {
           padding: .5rem 0; }
 
@@ -877,6 +889,65 @@ a {
     width: 280px; }
     .container-sistema .background-sidebar .sidebar {
       width: 280px; } }
+/****************************************************************************************/
+/****************************************************************************************/
+/*									Estilos pagina Orden								*/
+/****************************************************************************************/
+.container-sistema .principal .orden .panel .cuerpo {
+  padding: .5rem 0; }
+  .container-sistema .principal .orden .panel .cuerpo .cabeza-orden {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #d2d2d2; }
+    .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-orden-numero {
+      color: #C12C42; }
+      .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-orden-numero span {
+        margin-left: .4rem;
+        color: #464a4c; }
+    .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .datos-cliente {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .datos-cliente .texto-datos-cliente {
+        color: #C12C42; }
+        .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .datos-cliente .texto-datos-cliente span {
+          margin-left: .4rem;
+          color: #464a4c; }
+    .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-email {
+      color: #C12C42; }
+      .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-email span {
+        margin-left: .4rem;
+        color: #464a4c; }
+  .container-sistema .principal .orden .panel .cuerpo .pie-orden {
+    padding: 0 1rem;
+    padding-top: 1rem;
+    margin-top: .4rem;
+    border-top: 2px solid #d2d2d2; }
+    .container-sistema .principal .orden .panel .cuerpo .pie-orden .info-orden {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .container-sistema .principal .orden .panel .cuerpo .pie-orden .info-orden h5 {
+        -ms-flex-item-align: center;
+            align-self: center;
+        color: #C12C42; }
+        .container-sistema .principal .orden .panel .cuerpo .pie-orden .info-orden h5 span {
+          margin-left: .4rem;
+          color: #464a4c; }
+
 /****************************************************************************************/
 
 /*# sourceMappingURL=rmsoft.css.map */
