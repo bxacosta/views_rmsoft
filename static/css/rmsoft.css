@@ -57,6 +57,12 @@ a {
 .fa-trash-o {
   padding: 0 1.5px; }
 
+.fa-times {
+  padding: 0 1.5px; }
+
+.fa-floppy-o {
+  padding: 0 1.5px; }
+
 .ta-readonly {
   background-color: transparent !important;
   padding: 0; }
@@ -113,15 +119,10 @@ a {
     padding: .3rem 1rem;
     margin: 0 .1rem; }
 
-.tab-col-select select {
-  height: 1.45rem !important;
-  padding: 0 .2rem;
-  width: auto; }
-
-.tab-col-input input.form-control {
-  padding: 0 .3rem; }
-.tab-col-input .input-fehca {
-  width: auto; }
+.tab-col-costo p {
+  margin-bottom: 0; }
+  .tab-col-costo p span {
+    padding: 0 .2rem; }
 
 @media (max-width: 575px) {
   .tab-col-botones {
@@ -177,7 +178,7 @@ a {
   cursor: pointer; }
 
 .boton-ol-principal:focus {
-  color: #d1354c;
+  color: #f2f2f2;
   -webkit-box-shadow: none;
           box-shadow: none; }
 
@@ -895,43 +896,36 @@ a {
 /****************************************************************************************/
 .container-sistema .principal .orden .panel .cuerpo {
   padding: .5rem 0; }
-  .container-sistema .principal .orden .panel .cuerpo .cabeza-orden {
+  .container-sistema .principal .orden .panel .cuerpo .detalle-orden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 1rem 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #d2d2d2; }
-    .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-orden-numero {
-      color: #C12C42; }
-      .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-orden-numero span {
-        margin-left: .4rem;
-        color: #464a4c; }
-    .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .datos-cliente {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1rem;
+    border-bottom: 1px solid #d2d2d2;
+    margin-bottom: 1.5rem; }
+    .container-sistema .principal .orden .panel .cuerpo .detalle-orden .cabeza-orden {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
-      .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .datos-cliente .texto-datos-cliente {
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-top: 1rem; }
+      .container-sistema .principal .orden .panel .cuerpo .detalle-orden .cabeza-orden h5 {
+        -ms-flex-item-align: center;
+            align-self: center;
         color: #C12C42; }
-        .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .datos-cliente .texto-datos-cliente span {
+        .container-sistema .principal .orden .panel .cuerpo .detalle-orden .cabeza-orden h5 span {
           margin-left: .4rem;
           color: #464a4c; }
-    .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-email {
-      color: #C12C42; }
-      .container-sistema .principal .orden .panel .cuerpo .cabeza-orden .texto-email span {
-        margin-left: .4rem;
-        color: #464a4c; }
-  .container-sistema .principal .orden .panel .cuerpo .pie-orden {
-    padding: 0 1rem;
-    padding-top: 1rem;
-    margin-top: .4rem;
-    border-top: 2px solid #d2d2d2; }
-    .container-sistema .principal .orden .panel .cuerpo .pie-orden .info-orden {
+    .container-sistema .principal .orden .panel .cuerpo .detalle-orden .info-orden {
+      margin: 1rem 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -940,14 +934,57 @@ a {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-      .container-sistema .principal .orden .panel .cuerpo .pie-orden .info-orden h5 {
+      .container-sistema .principal .orden .panel .cuerpo .detalle-orden .info-orden h5 {
         -ms-flex-item-align: center;
             align-self: center;
-        color: #C12C42; }
-        .container-sistema .principal .orden .panel .cuerpo .pie-orden .info-orden h5 span {
+        color: #C12C42;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .container-sistema .principal .orden .panel .cuerpo .detalle-orden .info-orden h5 .etiqueta-orden-cabeza {
+          -ms-flex-item-align: center;
+              align-self: center;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 auto;
+                  flex: 1 1 auto;
+          margin-left: 0; }
+        .container-sistema .principal .orden .panel .cuerpo .detalle-orden .info-orden h5 .input-orden-cabeza {
+          float: 1 1 auto;
+          padding: 0 1rem; }
+        .container-sistema .principal .orden .panel .cuerpo .detalle-orden .info-orden h5 span {
           margin-left: .4rem;
           color: #464a4c; }
+      .container-sistema .principal .orden .panel .cuerpo .detalle-orden .info-orden button {
+        height: 2.45rem;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto; }
+  .container-sistema .principal .orden .panel .cuerpo .pie-orden {
+    padding: 0 1rem;
+    border-top: 1px solid #d2d2d2;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .container-sistema .principal .orden .panel .cuerpo .pie-orden h5 {
+      -ms-flex-item-align: center;
+          align-self: center;
+      color: #C12C42; }
+      .container-sistema .principal .orden .panel .cuerpo .pie-orden h5 span {
+        margin-left: .4rem;
+        color: #464a4c; }
+.container-sistema .principal .orden #modal-confirmar-reserva .confirmar-reserva h5 {
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #464a4c; }
+  .container-sistema .principal .orden #modal-confirmar-reserva .confirmar-reserva h5 span {
+    margin-left: .4rem; }
 
 /****************************************************************************************/
-
 /*# sourceMappingURL=rmsoft.css.map */

@@ -91,7 +91,14 @@ body{
 a {
 	color: $texto_claro;
 }
+// Iconos
 .fa-trash-o {
+	padding: 0 1.5px;
+}
+.fa-times {
+	padding: 0 1.5px;
+}
+.fa-floppy-o {
 	padding: 0 1.5px;
 }
 .ta-readonly {
@@ -155,19 +162,12 @@ a {
 		margin: 0 .1rem;
 	}
 }
-.tab-col-select {
-	select {
-		height: 1.45rem !important;
-		padding: 0 .2rem;
-		width: auto;
-	}
-}
-.tab-col-input {
-	input.form-control {
-		padding: 0 .3rem;
-	}
-	.input-fehca {
-		width: auto;
+.tab-col-costo{
+	p {
+		margin-bottom: 0;
+		span {
+			padding: 0 .2rem;
+		}
 	}
 }
 @media(max-width: 575px) {
@@ -220,7 +220,7 @@ a {
 	cursor: pointer;
 }
 .boton-ol-principal:focus {
-	color: $contraste_primario;
+	color: $texto_claro;
 	box-shadow: none;
 }
 /****************************************************************************************/
@@ -250,6 +250,9 @@ a {
 					padding: 8px 1.2rem;
 					margin-left: auto;
 					margin-right: 1.8rem;
+				}
+				.boton-ol-principal:active {
+
 				}
 				.boton-menu {
 					border: 0;
@@ -1045,47 +1048,17 @@ a {
 			.panel {
 				.cuerpo {
 					padding: .5rem 0;
-					.cabeza-orden {
+					.detalle-orden {
 						display: flex;
-						justify-content: space-between;
-						flex-wrap: wrap;
-						padding: 1rem 1rem; 
-						margin-bottom: 1rem;
-						border-bottom: 2px solid $separador-panel;
-						.texto-orden-numero {
-							color: $primario;
-							span {
-								margin-left: .4rem;
-								color: $texto_opaco;
-							}
-						}
-						.datos-cliente {
-							display: flex;
-							.texto-datos-cliente {
-								color: $primario;
-								span {
-									margin-left: .4rem;
-									color: $texto_opaco;
-								}
-							}
-						}
-						.texto-email {
-							color: $primario;
-							span {
-								margin-left: .4rem;
-								color: $texto_opaco;
-							}
-						}	
-					}
-					.pie-orden {
-						padding: 0 1rem; 
-						padding-top: 1rem;
-						margin-top: .4rem;
-						border-top: 2px solid $separador-panel;
-						.info-orden {
+						flex-direction: column;
+						padding: 0 1rem;
+						border-bottom: 1px solid $separador-panel;
+						margin-bottom: 1.5rem;
+						.cabeza-orden {
 							display: flex;
 							flex-wrap: wrap;
 							justify-content: space-between;
+							padding-top: 1rem;
 							h5 {
 								align-self: center;
 								color: $primario;
@@ -1094,6 +1067,62 @@ a {
 									color: $texto_opaco;
 								}
 							}
+						}
+						.info-orden {
+							margin: 1rem 0;
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: space-between;
+							h5 {
+								align-self: center;
+								color: $primario;
+								display: flex;
+								.etiqueta-orden-cabeza {
+									align-self: center;
+									flex: 1 1 auto;
+									margin-left: 0;
+								}
+								.input-orden-cabeza {
+									float: 1 1 auto;
+									padding: 0 1rem;
+								}
+								span {
+									margin-left: .4rem;
+									color: $texto_opaco;
+								}
+							}
+							button {
+								height: 2.45rem;
+								flex: 1 1 auto;
+							}
+						}
+					}
+					.pie-orden {
+						padding: 0 1rem;
+						border-top: 1px solid $separador-panel;
+						margin-top: 2rem; 
+						padding-top: 1rem;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						h5 {
+							align-self: center;
+							color: $primario;
+							span {
+								margin-left: .4rem;
+								color: $texto_opaco;
+							}
+						}
+					}
+				}
+			}
+			#modal-confirmar-reserva {
+				.confirmar-reserva {
+					h5 {
+						align-self: center;
+						color: $texto_opaco;
+						span {
+							margin-left: .4rem;
 						}
 					}
 				}
