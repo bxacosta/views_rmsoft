@@ -987,4 +987,20 @@ a {
     margin-left: .4rem; }
 
 /****************************************************************************************/
+/****************************************************************************************/
+/*									Estilos pagina Habitacion								*/
+/****************************************************************************************/
+.container-sistema .principal .contenido .panel .cuerpo .datos-habitacion {
+  margin-bottom: 1rem;
+  padding: .5rem 1rem; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .input-subir-imagen {
+    padding: .5rem 0; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-habitacion {
+    padding: 0 1rem;
+    text-align: center; }
+    .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-habitacion #mostrador {
+      max-height: 240px; }
+
+/****************************************************************************************/
+
 /*# sourceMappingURL=rmsoft.css.map */
