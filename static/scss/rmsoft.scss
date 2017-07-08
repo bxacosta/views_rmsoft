@@ -155,7 +155,6 @@ a {
 .tab-col-botones {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	button {
 		font-size: 1.2rem;
 		padding: .3rem 1rem;
@@ -1150,6 +1149,10 @@ a {
 					#mostrador {
 						max-height: 240px;
 					}
+				}
+				.habitacion-form-precio {
+					display: flex;
+					
 				}
 			}
 		}

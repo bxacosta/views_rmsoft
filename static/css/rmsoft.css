@@ -110,10 +110,7 @@ a {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+          justify-content: center; }
   .tab-col-botones button {
     font-size: 1.2rem;
     padding: .3rem 1rem;
@@ -1000,7 +997,10 @@ a {
     text-align: center; }
     .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-habitacion #mostrador {
       max-height: 240px; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .habitacion-form-precio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 /****************************************************************************************/
-
 /*# sourceMappingURL=rmsoft.css.map */

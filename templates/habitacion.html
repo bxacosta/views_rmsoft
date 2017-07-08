@@ -144,7 +144,7 @@
                     </div>
                     <div class="cuerpo">
                         <div class="datos-habitacion row">
-                            <form class="col-12 col-md-12 col-lg-7" action="#" method="POST">
+                            <form class="col-12 col-md-12 col-lg-7 col-xl-8" action="#" method="POST">
                                 <div class="form-group row">
                                     <label for="numero" class="col-md-3 col-form-label hidden-sm-down">Número:</label>
                                     <div class="col-6 col-md-3">
@@ -173,23 +173,25 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="precio" class="col-md-3 col-form-label hidden-sm-down">Costo:</label>
-                                    <div class="input-group col-6 col-md-4">
-                                        <span class="input-group-addon" id="btnGroupAddon">Día $</span>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="input-group col-6 col-md-5">
-                                        <span class="input-group-addon" id="btnGroupAddon">Hora $</span>
-                                        <input type="text" class="form-control">
+                                    <div class="habitacion-form-precio col-12 col-md-9">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="btnGroupAddon">Día $</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group ml-2">
+                                            <span class="input-group-addon" id="btnGroupAddon">Hora $</span>
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row hidden-lg-up">
                                     <div class="col-12">
-                                        <a href="../static/images/default-room.jpg" class="btn btn-secondary btn-block link-ver-img" data-fancybox>
+                                        <a href="../static/images/default-room.jpg" class="link-ver-img btn btn-secondary btn-block" data-fancybox>
                                             Ver Imagen
                                             <i class="fa fa-picture-o" aria-hidden="true"></i>
                                         </a>
                                         <div class="input-subir-imagen">
-                                            <input type="file" class="form-control-file">
+                                            <input type="file" id="imgInp2" class="form-control-file">
                                         </div>
                                     </div>
                                 </div>
@@ -200,36 +202,38 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="imagen-habitacion col-12 col-lg-5 hidden-md-down">
+                            <div class="imagen-habitacion col-12 col-lg-5 col-xl-4 hidden-md-down">
                                 <a href="../static/images/default-room.jpg" class="link-ver-img" data-fancybox>
                                     <img src="../static/images/default-room.jpg" class="img-fluid img-thumbnail" id="mostrador" alt="habitacion"/>
                                 </a>
                                 <div class="input-subir-imagen">
-                                    <input type="file" id="imgInp" class="form-control-file">
+                                    <input type="file" id="imgInp1" class="form-control-file">
                                 </div>
                             </div>
                         </div> 
                         <table class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>Habitación Nº</th>
+                                    <th>Nº</th>
                                     <th>Tipo</th>
                                     <th>Capacidad</th>
                                     <th>Ubicación</th>
                                     <th>Descripcción</th>
                                     <th>Costo</th>
-                                    <th>Sub. Total</th>
+                                    <th>Img</th>
+                                    <th>Acción</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>Habitación Nº</th>
+                                    <th>Nº</th>
                                     <th>Tipo</th>
                                     <th>Capacidad</th>
                                     <th>Ubicación</th>
                                     <th>Descripcción</th>
                                     <th>Costo</th>
-                                    <th>Sub. Total</th>
+                                    <th>Img</th>
+                                    <th>Acción</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -251,7 +255,18 @@
                                             </p>
                                         </div>
                                     </td>
-                                    <td>$15.80</td>
+                                    <td>
+                                        <div class="tab-col-botones">
+                                            <a href="../static/images/default-room.jpg" class="btn btn-secondary" data-fancybox><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tab-col-botones">
+                                            <button type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                            <button type="button" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -310,7 +325,11 @@
             }
         }
 
-        $("#imgInp").change(function(){
+        $("#imgInp1").change(function(){
+            readURL(this);
+        });
+
+        $("#imgInp2").change(function(){
             readURL(this);
         });
     </script>
