@@ -101,6 +101,9 @@ a {
 .fa-floppy-o {
 	padding: 0 1.5px;
 }
+.fa-plus {
+	padding: 0 1.5px;
+}
 .ta-readonly {
 	background-color: transparent !important;
 	padding: 0;
@@ -1148,6 +1151,35 @@ a {
 					text-align: center;
 					#mostrador {
 						max-height: 240px;
+					}
+				}
+				.habitacion-form-precio {
+					display: flex;
+					
+				}
+			}
+		}
+	}
+}
+/****************************************************************************************/
+
+/****************************************************************************************/
+/*									Estilos pagina Usuario								*/
+/****************************************************************************************/
+.container-sistema .principal .contenido {
+	.panel {
+		.cuerpo {
+			.datos-habitacion {
+				margin-bottom: 1rem;
+				padding: .5rem 1rem;
+				.input-subir-imagen {
+					padding: .5rem 0;
+				}
+				.imagen-persona {
+					padding: 0 1rem;
+					text-align: center;
+					#mostrador {
+						max-height: 200px;
 					}
 				}
 				.habitacion-form-precio {

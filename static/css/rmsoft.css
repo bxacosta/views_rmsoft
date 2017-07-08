@@ -63,6 +63,9 @@ a {
 .fa-floppy-o {
   padding: 0 1.5px; }
 
+.fa-plus {
+  padding: 0 1.5px; }
+
 .ta-readonly {
   background-color: transparent !important;
   padding: 0; }
@@ -997,6 +1000,25 @@ a {
     text-align: center; }
     .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-habitacion #mostrador {
       max-height: 240px; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .habitacion-form-precio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+/****************************************************************************************/
+/****************************************************************************************/
+/*									Estilos pagina Usuario								*/
+/****************************************************************************************/
+.container-sistema .principal .contenido .panel .cuerpo .datos-habitacion {
+  margin-bottom: 1rem;
+  padding: .5rem 1rem; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .input-subir-imagen {
+    padding: .5rem 0; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-persona {
+    padding: 0 1rem;
+    text-align: center; }
+    .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-persona #mostrador {
+      max-height: 200px; }
   .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .habitacion-form-precio {
     display: -webkit-box;
     display: -ms-flexbox;
