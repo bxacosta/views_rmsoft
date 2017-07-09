@@ -187,8 +187,9 @@ a {
 /*						Estilos Pagina Principal Inicio	 								*/
 /****************************************************************************************/
 .background {
-  background: url("../images/fondo-inicio-mobile.jpg") no-repeat center top;
+  background: url("../images/fondo-inicio-desktop.jpg") no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center; }
   .background .container-inicio, .background .container-login {
     padding-top: 2rem;
@@ -201,52 +202,29 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .background .container-inicio .navbar, .background .container-login .navbar {
+    .background .container-inicio .navbar-inicio .navbar, .background .container-login .navbar-inicio .navbar {
       background-color: rgba(0, 0, 0, 0.85);
-      color: #f2f2f2;
       padding: 0.6rem 0; }
-      .background .container-inicio .navbar .container, .background .container-login .navbar .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-        .background .container-inicio .navbar .container .boton-ol-principal, .background .container-login .navbar .container .boton-ol-principal {
-          padding: 8px 1.2rem;
-          margin-left: auto;
-          margin-right: 1.8rem; }
-        .background .container-inicio .navbar .container .boton-menu, .background .container-login .navbar .container .boton-menu {
-          border: 0;
-          border-radius: 4px;
+      .background .container-inicio .navbar-inicio .navbar .container, .background .container-login .navbar-inicio .navbar .container {
+        padding: 0 1rem; }
+        .background .container-inicio .navbar-inicio .navbar .container .navbar-toggler, .background .container-login .navbar-inicio .navbar .container .navbar-toggler {
+          color: #f2f2f2;
           font-size: 1.8rem;
-          margin: 0;
-          padding: 0 0.7rem;
-          background-color: #C12C42;
-          color: #f2f2f2; }
-        .background .container-inicio .navbar .container .boton-menu:hover, .background .container-inicio .navbar .container .boton-menu:focus, .background .container-login .navbar .container .boton-menu:hover, .background .container-login .navbar .container .boton-menu:focus {
-          outline: none; }
-        .background .container-inicio .navbar .container .menu, .background .container-login .navbar .container .menu {
-          -webkit-box-flex: 1;
-              -ms-flex: 1 1 100%;
-                  flex: 1 1 100%; }
-          .background .container-inicio .navbar .container .menu ul, .background .container-login .navbar .container .menu ul {
-            padding: 0;
-            list-style: none;
-            margin: 1rem 0 0 0;
-            text-transform: uppercase; }
-            .background .container-inicio .navbar .container .menu ul li a, .background .container-login .navbar .container .menu ul li a {
-              color: #f2f2f2;
-              text-decoration: none;
-              display: block;
-              padding: .6rem 0;
-              border-top: 1px solid #C9B76A; }
-            .background .container-inicio .navbar .container .menu ul li a:hover, .background .container-login .navbar .container .menu ul li a:hover {
-              color: #C12C42; }
-            .background .container-inicio .navbar .container .menu ul li.active a, .background .container-login .navbar .container .menu ul li.active a {
-              color: #C12C42; }
+          padding: .3rem .75rem;
+          margin-top: .2rem;
+          background-color: #C12C42; }
+        .background .container-inicio .navbar-inicio .navbar .container .navbar-brand, .background .container-login .navbar-inicio .navbar .container .navbar-brand {
+          padding: 0; }
+        .background .container-inicio .navbar-inicio .navbar .container .opciones-navbar, .background .container-login .navbar-inicio .navbar .container .opciones-navbar {
+          margin-left: auto; }
+        .background .container-inicio .navbar-inicio .navbar .container .navbar-collapse, .background .container-login .navbar-inicio .navbar .container .navbar-collapse {
+          width: auto; }
+          .background .container-inicio .navbar-inicio .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link, .background .container-login .navbar-inicio .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
+            font-size: 1.1rem;
+            padding: .5rem 1rem;
+            margin-left: 1.4rem; }
+          .background .container-inicio .navbar-inicio .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link:hover, .background .container-login .navbar-inicio .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+            color: #C12C42; }
     .background .container-inicio .principal, .background .container-login .principal {
       margin: auto 0;
       color: #f2f2f2; }
@@ -264,7 +242,8 @@ a {
         margin-bottom: 3.4rem; }
       .background .container-inicio .principal .container .boton-lg, .background .container-login .principal .container .boton-lg {
         font-size: 1.3rem;
-        padding: 1rem 1.8rem; }
+        padding: .7rem 2.4rem;
+        border: 1px solid #C9B76A; }
     .background .container-inicio .flecha-bajar a, .background .container-login .flecha-bajar a {
       display: inline-block;
       font-size: 4rem;
@@ -273,78 +252,96 @@ a {
               animation: animacion-flecha-bajar 2s ease-in-out infinite; }
 
 #servicios {
-  background-color: #C12C42;
-  color: #f2f2f2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  #servicios .container .titulo {
-    margin: 2rem 0; }
+  background-color: #111111;
+  color: #f2f2f2; }
+  #servicios .container {
+    padding-bottom: 1.2rem; }
+    #servicios .container .titulo {
+      padding: 2rem 0;
+      color: #C9B76A; }
+    #servicios .container .row {
+      margin-bottom: 2rem; }
+      #servicios .container .row .texto-servicios {
+        font-size: 1.2rem;
+        text-align: justify; }
+      #servicios .container .row .container-carousel {
+        margin-left: auto;
+        width: 80%; }
+        #servicios .container .row .container-carousel .carousel {
+          margin-left: auto;
+          margin-right: 0; }
+          #servicios .container .row .container-carousel .carousel img {
+            height: 250px; }
 
-#contacto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+#contacto .container {
+  padding-bottom: 1.2rem; }
   #contacto .container .titulo {
     margin: 2rem 0; }
+  #contacto .container .texto-contacto .fila-contacto {
+    margin-bottom: 1.5rem; }
+    #contacto .container .texto-contacto .fila-contacto h5 {
+      color: #C12C42;
+      margin: 0; }
 
-.pie-pagina {
+#mapa {
+  height: 300px; }
+  #mapa iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; }
+  #mapa iframe.click {
+    pointer-events: auto; }
+
+#pie {
   background-color: rgba(0, 0, 0, 0.85);
   color: #f2f2f2;
   padding: 1rem 0; }
-  .pie-pagina .container p {
+  #pie .container p {
     margin: 0; }
 
-@media (min-width: 576px) {
-  .background {
-    background: url("../images/fondo-inicio-desktop.jpg") no-repeat center top;
-    background-size: cover;
-    background-position: center; }
-    .background .container-inicio .navbar .container .menu, .background .container-login .navbar .container .menu {
-      height: auto !important;
-      display: block;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 30%;
-              flex: 0 1 30%; }
-      .background .container-inicio .navbar .container .menu ul, .background .container-login .navbar .container .menu ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 0; }
-        .background .container-inicio .navbar .container .menu ul li, .background .container-login .navbar .container .menu ul li {
-          -webkit-box-flex: 1;
-              -ms-flex: 1 1 100%;
-                  flex: 1 1 100%; }
-          .background .container-inicio .navbar .container .menu ul li a, .background .container-login .navbar .container .menu ul li a {
-            margin: 0 .4rem;
-            padding: .4rem 0;
-            text-transform: capitalize;
-            border-top: none; }
-          .background .container-inicio .navbar .container .menu ul li a:hover, .background .container-login .navbar .container .menu ul li a:hover {
-            color: #C12C42;
-            border-bottom: 1px solid #C9B76A; }
-        .background .container-inicio .navbar .container .menu ul li.active a, .background .container-login .navbar .container .menu ul li.active a {
-          color: #C12C42;
-          border-bottom: 1px solid #C9B76A; } }
 @media (max-width: 768px) {
-  .container-inicio .navbar {
+  .container-inicio .navbar-inicio .navbar {
     padding: 0.4rem 0; }
-    .container-inicio .navbar .container {
+    .container-inicio .navbar-inicio .navbar .container {
       width: 600px;
       max-width: 100%; }
+      .container-inicio .navbar-inicio .navbar .container .opciones-navbar {
+        float: right;
+        margin-top: .3rem;
+        margin-right: 4.5rem; }
   .container-inicio .principal .container .denominacion {
-    margin-top: 1rem;
-    font-size: 2.1rem;
-    margin-bottom: 0; }
+    margin-top: 1.5rem !important;
+    font-size: 2.1rem !important;
+    margin-bottom: 0 !important; }
   .container-inicio .principal .container .titulo {
-    margin: .8rem 0;
-    font-size: 4.6rem; }
+    margin: .8rem 0 !important;
+    font-size: 4.4rem !important; }
   .container-inicio .principal .container .descripcion {
-    font-size: 1.1rem;
-    margin-bottom: 2.2rem; }
-  .container-inicio .principal .container .boton-ol-principal {
-    font-size: 1.2rem;
-    padding: .8rem .8rem; } }
+    font-size: 1rem !important;
+    margin-bottom: 2.2rem !important; }
+  .container-inicio .principal .container .boton-lg {
+    font-size: 1rem !important;
+    padding: .7rem 2.4rem;
+    border: 1px solid #C9B76A; }
+
+  #servicios .container .titulo {
+    padding: 2rem 0; }
+
+  #contacto .container .texto-contacto .fila-contacto {
+    margin-bottom: 1rem; } }
+@media (max-width: 576px) {
+  .background {
+    background: url("../images/fondo-inicio-mobile.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; } }
+@media (max-width: 350px) {
+  .container-inicio .principal .container .denominacion {
+    font-size: 2rem !important; }
+  .container-inicio .principal .container .descripcion {
+    margin-bottom: 1rem !important; } }
 @-webkit-keyframes animacion-flecha-bajar {
   from {
     -webkit-transform: translateY(0);
@@ -503,10 +500,11 @@ a {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: end; }
-        .container-sistema .background-sidebar .sidebar .usuario .foto {
+        .container-sistema .background-sidebar .sidebar .usuario .foto-usuario {
           -ms-flex-item-align: center;
               align-self: center;
           width: 80px;
+          height: 80px;
           margin-right: 1.4rem;
           background-color: #f2f2f2;
           border: 3px solid #C9B76A; }
@@ -524,10 +522,12 @@ a {
               -ms-flex-direction: column;
                   flex-direction: column; }
           .container-sistema .background-sidebar .sidebar .usuario .texto .nombre {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-decoration: none;
             color: #f2f2f2;
             margin-bottom: .2rem; }
+            .container-sistema .background-sidebar .sidebar .usuario .texto .nombre span {
+              margin: 0 .2rem; }
           .container-sistema .background-sidebar .sidebar .usuario .texto .rol {
             font-size: .9rem;
             color: #C9B76A; }
@@ -958,7 +958,8 @@ a {
         height: 2.45rem;
         -webkit-box-flex: 1;
             -ms-flex: 1 1 auto;
-                flex: 1 1 auto; }
+                flex: 1 1 auto;
+        max-width: 10rem; }
   .container-sistema .principal .orden .panel .cuerpo .pie-orden {
     padding: 0 1rem;
     border-top: 1px solid #d2d2d2;
@@ -1009,20 +1010,31 @@ a {
 /****************************************************************************************/
 /*									Estilos pagina Usuario								*/
 /****************************************************************************************/
-.container-sistema .principal .contenido .panel .cuerpo .datos-habitacion {
+.container-sistema .principal .contenido .panel .cuerpo .datos-usuario {
   margin-bottom: 1rem;
   padding: .5rem 1rem; }
-  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .input-subir-imagen {
+  .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .input-subir-imagen {
     padding: .5rem 0; }
-  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-persona {
+  .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .imagen-persona {
     padding: 0 1rem;
     text-align: center; }
-    .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-persona #mostrador {
+    .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .imagen-persona #mostrador {
       max-height: 200px; }
-  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .habitacion-form-precio {
+  .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .habitacion-form-precio {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
 
 /****************************************************************************************/
+/****************************************************************************************/
+/*									Estilos pagina Configuracion								*/
+/****************************************************************************************/
+.container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-logo-empresa {
+  padding: 0 1rem;
+  text-align: center; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-habitacion .imagen-logo-empresa #mostrador {
+    max-height: 240px; }
+
+/****************************************************************************************/
+
 /*# sourceMappingURL=rmsoft.css.map */

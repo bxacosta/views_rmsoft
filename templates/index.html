@@ -15,6 +15,9 @@
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
 	<!-- Font Awesome CSS -->
 	<link rel="stylesheet" href="../static/css/font-awesome.css"/>
+	<!-- Font OWL carousel CSS -->
+	<link rel="stylesheet" href="../static/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="../static/css/owl.theme.default.min.css"/>
 	<!-- Estilos personalizados CSS -->
 	<link rel="stylesheet" href="../static/css/rmsoft.css"/>
 
@@ -22,39 +25,45 @@
 <body>
 	<div class="background">
 		<section class="container-inicio" id="inicio">
-			<header class="navbar fixed-top">
-				<div class="container">
-					<div class="marca">
-						<a href="index.html" class="logo"><img src="../static/images/logo.svg" alt="Logo"/></a>
-						<a href="index.html" class="texto hidden-xs-down">Libertad</a>
+			<header class="navbar-inicio">
+				<nav class="navbar fixed-top navbar-toggleable-sm fixed">
+					<div class="container">
+						<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu-inicio" aria-expanded="false">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+						</button>
+						<a class="navbar-brand" href="index.html">
+							<div class="marca">
+								<img class="logo" src="../static/images/logo.svg" alt="Logo"/>
+								<span class="texto hidden-xs-down">Libertad</span>
+							</div>
+						</a>
+						<div class="opciones-navbar">
+							<a href="login.html" class="btn boton-ol-principal">Iniciar sesión</a>
+						</div>
+						<div class="collapse navbar-collapse" id="menu-inicio">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#inicio">Inicio</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#servicios">Servicios</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#contacto">Contacto</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<a href="login.html" class="btn boton-ol-principal">Iniciar sesión</a>
-					<button type="button" class="boton-menu hidden-sm-up" data-toggle="collapse" data-target="#menu-inicio" aria-expanded="false">
-						<i class="fa fa-bars" aria-hidden="true"></i>
-					</button>
-					<div class="menu collapse" id="menu-inicio">
-						<ul class="text-center">
-							<li class="active">
-								<a href="#inicio" class="">Inicio</a>
-							</li>
-							<li class="">
-								<a href="#servicios" class="">Servicios</a>
-							</li>
-							<li class="">
-								<a href="#contacto" class="">Contacto</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+				</nav>
 			</header>
 			<div class="principal text-center">
 				<div class="container">
 					<p class="denominacion">Hotel</p>
 					<h1 class="titulo">Libertad</h1>
 					<div class="row justify-content-md-center">
-						<p class="descripcion col-lg-10">Ven y disfruta de tus mejores vacaciones en la playa hospedándote en nuestro hostal, regístrate e ingresa a nuestro sistema y reserva una de las mejores habitaciones de la zona.</p>
+						<p class="descripcion col-12 col-md-10">Ven y disfruta de tus mejores vacaciones en la playa hospedándose en nuestro hostal, registrarte e ingresa a nuestro sistema y reserva una habitaciones.</p>
 					</div>
-					<a href="registro.html" class="btn boton-principal boton-lg">Crear cuenta / Iniciar sesión</a>
+					<a href="registro.html" class="btn boton-principal boton-lg">Crear cuenta</a>
 				</div>
 			</div>
 			<div class="flecha-bajar text-center">
@@ -62,12 +71,23 @@
 			</div>
 		</section>
 	</div>
-	
-	
 	<main id="servicios">
 		<div class="container">
 			<div class="titulo text-center">
 				<h2>Reserva y Alquiler de Habitaciones</h2>
+			</div>
+			<div class="row">
+				<div class="texto-servicios col-sm-12">
+					Hotel Libertad es su mejor elección a la hora de escoger un lugar para hospedarse ya sea que este de vacaciones o de visita, nuestro personal está dispuesto a ofrecerle la mejor atención y otorgarle un servicio de calidad, además contamos con un gran número de habitaciones equipadas con todas las comodidades que usted necesite y a los mejores precios. Contamos también con un restaurante con un delicioso menú con los mejores platos típicos de la zona.
+				</div>
+			</div>
+			<div class="owl-carousel owl-theme">
+				<div><img src="../static/images/fondo-inicio-desktop.jpg" alt=""/></div>
+				<div><img src="../static/images/default-room.jpg" alt=""/></div>
+				<div><img src="../static/images/fondo-inicio-desktop.jpg" alt=""/></div>
+				<div><img src="../static/images/default-room.jpg" alt=""/></div>
+				<div><img src="../static/images/fondo-inicio-desktop.jpg" alt=""/></div>
+				<div><img src="../static/images/default-room.jpg" alt=""/></div>
 			</div>
 		</div>
 	</main>
@@ -76,16 +96,97 @@
 			<div class="titulo text-center">
 				<h2>Información de Contacto</h2>
 			</div>
+			<div class="row">
+				<div class="texto-contacto col-12 col-md-6 col-lg-6">
+					<div class="fila-contacto row">
+						<h5 class="col-4 col-sm-2 col-md-3">Telefono:</h5>
+						<span class="col-8 col-sm-4 col-md-3">2304552</span>
+						<h5 class="col-4 col-sm-2 col-md-3">Celular:</h5>
+						<span class="col-8 col-sm-4 col-md-3">0934652364</span>
+					</div>
+					<div class="fila-contacto row">
+						<h5 class="col-4 col-sm-2 col-md-3">País:</h5>
+						<span class="col-8 col-sm-4 col-md-3">Ecuador</span>
+						<h5 class="col-4 col-sm-2 col-md-3">Ciudad:</h5>
+						<span class="col-8 col-sm-4 col-md-3">Quito</span>
+					</div>
+					<div class="fila-contacto row">
+						<h5 class="col-4 col-sm-2 col-md-3">Email:</h5>
+						<span class="col-8 col-sm-10 col-md-9">hlinfo@hotmail.com</span>
+					</div>
+					<div class="fila-contacto row">
+						<h5 class="col-4 col-sm-2 col-md-3">Dirección:</h5>
+						<span class="col-8 col-sm-10 col-md-9">Av. America E2-432 y Ciudadela Universitaria. Frente al Registro Civil.</span>
+					</div>
+				</div>
+				<div class="col-lg-1 hidden-md-down"></div>
+				<div class="col-12 col-md-6 col-lg-5">
+					<form action="#">
+                        <div class="form-group row">
+                            <label for="nombre" class="col-md-2 col-form-label hidden-xs-down">Nombre:</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" data-toggle="tooltip" data-placement="top" title="Ingrese su nombre completo"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-2 col-form-label hidden-xs-down">Email:</label>
+
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" id="email" name="email" placeholder="Ingrese su email" data-toggle="tooltip" data-placement="top" title="Ingrese su email"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="mensaje" class="col-md-2 col-form-label hidden-xs-down">Mensaje:</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" rows="4" id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" data-toggle="tooltip" data-placement="top" title="Ingrese un mensaje"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        	<div class="col-md-12 text-right">
+                        		<button type="reset" class="btn btn-secondary">Limpiar</button>
+                        		<button type="submit" class="btn boton-principal">Enviar</button>
+                        	</div>
+                        </div>
+                    </form>
+				</div>
+			</div>
 		</div>
-	</section> 
-	<footer class="pie-pagina text-center" role='contentinfo'>
+		<div id="mapa">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.793826567352!2d-78.50422578543163!3d-0.2007655354613646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a8c54484dc1%3A0xd181ba6389c436e2!2sUniversidad+Central+del+Ecuador!5e0!3m2!1ses-419!2sec!4v1499568118263" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</section>
+	<footer class="text-center" id="pie" role='contentinfo'>
 		<div class="container">
-			<p>RMSoft © 2017 | Todos los derechos reservados</p>
+			<p><strong><a href="https://github.com/bxacosta" class="link-primario" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> RMSoft</a></strong> © 2017 | Desarrollo de aplicaciones Web.</p>
 		</div>
 	</footer>
-
 	<!-- jQuery first, then Bootstrap JS. -->
-    <script src="../static/js/jquery.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/jquery.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/owl.carousel.min.js"></script>
+	<script>
+		$('#mapa').click(function(){
+			$(this).find('iframe').addClass('click')
+		}).mouseleave(function(){
+			$(this).find('iframe').removeClass('click')});
+		$(document).ready(function(){
+			$(".owl-carousel").owlCarousel({
+				loop:true,
+				margin:4,
+				responsiveClass:true,
+				responsive:{
+					0:{
+						items:1,
+					},
+					600:{
+						items:2,
+					},
+					1000:{
+						items:3,
+					}
+				}
+			});
+		});
+	</script>
 </body>
 </html>

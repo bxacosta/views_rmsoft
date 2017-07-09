@@ -32,9 +32,11 @@
                     <a href="principal.html" class="texto hidden-xs-down">Libertad</a>
                 </div>
                 <div class="usuario">
-                    <img src="../static/images/default-user.jpg" class="foto rounded-circle hidden-md-down" alt="Usuario">
+                    <a href="cuenta.html">
+                        <img src="../static/images/default-user.jpg" class="foto-usuario rounded-circle hidden-md-down" alt="Usuario"/>
+                    </a>
                     <div class="texto">
-                        <a href="#" class="nombre">Bryan Acosta</a>
+                        <a href="#" class="nombre"><span>Apellido</span><span>Nombre</span></a>
                         <span class="rol">Administrador</span>
                     </div>
                 </div>
@@ -68,11 +70,11 @@
                     <h2 class="titulo">Principal</h2>
                     <div class="menu">
                         <ul class="">
-                            <li class="active">
-                                <a href=""><i class="fa fa-wrench" aria-hidden="true"></i><span class="hidden-xs-down"> Configuración</span></a>
+                            <li class="">
+                                <a href="configuracion.html"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hidden-xs-down"> Configuración</span></a>
                             </li>
                             <li class="">
-                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs-down"> Mi Cuenta</span></a>
+                                <a href="cuenta.html"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs-down"> Mi Cuenta</span></a>
                             </li>
                             <li class="">
                                 <a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hidden-xs-down"> Cerrar Sesión</span></a>
@@ -141,7 +143,89 @@
                             <div class="card">
                                 <div class="card-imagen">
                                     <a href="../static/images/default-room.jpg" class="hidden-md-down" data-fancybox>
-                                        <img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion">
+                                        <img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"/>
+                                    </a>
+                                    <a href="../static/images/default-room.jpg" class="btn-ver-imagen btn btn-secondary btn-block hidden-lg-up" data-fancybox>
+                                        Ver Imagen
+                                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="card-block">
+                                    <div class="card-head">
+                                        <div class="card-title">
+                                            <h4 class="numero">Nº <span>260</span></h4>
+                                            <a href="#" class="link-primario">
+                                                <h6>
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Disponible</span>
+                                                </h6> 
+                                            </a>
+                                            <h5 class="tipo">Simple</h5>
+                                        </div>
+                                        <div class="edit-estado">
+                                            <a href="#" class="btn-cancelar btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                            <a href="#" class="btn-guardar btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
+                                            <select class="selector form-control">
+                                                <option>Disponible</option>
+                                                <option>Ocupado</option>
+                                                <option>Reservada</option>
+                                                <option>Mantenimiento</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="info-text">
+                                            <div class="capacidad">
+                                                Capacidad:<span>3</span>
+                                            </div>
+                                            <div class="ubicacion">
+                                                Ubicación:<span>Planta Baja</span>
+                                            </div>
+                                            <a href="#ta2-descripcion" class="mas link-primario" data-toggle="collapse"  aria-expanded="false">
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="collapse show" id="ta2-descripcion">
+                                            <textarea class="form-control ta-readonly" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="ver-reservaciones">
+                                        <a class="btn-ver-reservaciones btn boton-ol-principal btn-block" data-toggle="modal" data-target="#modal-ver-reservaciones">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>Ver Reservaciones
+                                        </a>
+                                    </div>
+                                    <div class="fecha-reserva">
+                                        <div class="entrada">Fecha Arribo: 
+                                            <p class="fecha">12/09/2017 12:43<span class="zona">GTM-5</span></p>
+                                        </div>
+                                        <div class="salida">Fecha Salida: 
+                                            <p class="fecha">16/09/2017 12:43<span class="zona">GTM-5</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="costos">
+                                        <p>Costo Por:</p>
+                                        <div class="reserva">
+                                            <div class="precio">
+                                                <span class="cobro btn">Día</span>
+                                                <span class="valor btn">$23.60</span>
+                                            </div>
+                                            <div class="precio">
+                                                <span class="cobro btn">Hora</span>
+                                                <span class="valor btn">$6.40</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-pie">
+                                    <button class="btn boton-principal btn-block" data-toggle="modal" data-target="#modal-reservacion">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        Agregar a la orden de reserva
+                                    </button>
+                                </div>
+                            </div> <!-- Fin Card -->
+                            <div class="card">
+                                <div class="card-imagen">
+                                    <a href="../static/images/default-room.jpg" class="hidden-md-down" data-fancybox>
+                                        <img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"/>
                                     </a>
                                     <a href="../static/images/default-room.jpg" class="btn-ver-imagen btn btn-secondary btn-block hidden-lg-up" data-fancybox>
                                         Ver Imagen
@@ -220,6 +304,88 @@
                                     </button>
                                 </div>
                             </div> <!-- Fin Card -->
+                            <div class="card">
+                                <div class="card-imagen">
+                                    <a href="../static/images/default-room.jpg" class="hidden-md-down" data-fancybox>
+                                        <img class="card-img-top" src="../static/images/default-room.jpg" alt="habitacion"/>
+                                    </a>
+                                    <a href="../static/images/default-room.jpg" class="btn-ver-imagen btn btn-secondary btn-block hidden-lg-up" data-fancybox>
+                                        Ver Imagen
+                                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="card-block">
+                                    <div class="card-head">
+                                        <div class="card-title">
+                                            <h4 class="numero">Nº <span>260</span></h4>
+                                            <a href="#" class="link-primario">
+                                                <h6>
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Disponible</span>
+                                                </h6> 
+                                            </a>
+                                            <h5 class="tipo">Simple</h5>
+                                        </div>
+                                        <div class="edit-estado">
+                                            <a href="#" class="btn-cancelar btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                            <a href="#" class="btn-guardar btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
+                                            <select class="selector form-control">
+                                                <option>Disponible</option>
+                                                <option>Ocupado</option>
+                                                <option>Reservada</option>
+                                                <option>Mantenimiento</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="info-text">
+                                            <div class="capacidad">
+                                                Capacidad:<span>3</span>
+                                            </div>
+                                            <div class="ubicacion">
+                                                Ubicación:<span>Planta Baja</span>
+                                            </div>
+                                            <a href="#ta3-descripcion" class="mas link-primario" data-toggle="collapse"  aria-expanded="false">
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="collapse show" id="ta3-descripcion">
+                                            <textarea class="form-control ta-readonly" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, provident, nesciunt. Ex illum minus corporis!</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="ver-reservaciones">
+                                        <a class="btn-ver-reservaciones btn boton-ol-principal btn-block" data-toggle="modal" data-target="#modal-ver-reservaciones">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>Ver Reservaciones
+                                        </a>
+                                    </div>
+                                    <div class="fecha-reserva">
+                                        <div class="entrada">Fecha Arribo: 
+                                            <p class="fecha">12/09/2017 12:43<span class="zona">GTM-5</span></p>
+                                        </div>
+                                        <div class="salida">Fecha Salida: 
+                                            <p class="fecha">16/09/2017 12:43<span class="zona">GTM-5</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="costos">
+                                        <p>Costo Por:</p>
+                                        <div class="reserva">
+                                            <div class="precio">
+                                                <span class="cobro btn">Día</span>
+                                                <span class="valor btn">$23.60</span>
+                                            </div>
+                                            <div class="precio">
+                                                <span class="cobro btn">Hora</span>
+                                                <span class="valor btn">$6.40</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-pie">
+                                    <button class="btn boton-principal btn-block" data-toggle="modal" data-target="#modal-reservacion">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        Agregar a la orden de reserva
+                                    </button>
+                                </div>
+                            </div> <!-- Fin Card -->
                         </div><!-- Fin Contenedor Cards -->
                         <!-- Modal ver reservaciones -->
                         <div class="modal fade" id="modal-ver-reservaciones" tabindex="-1" role="dialog" aria-hidden="true">
@@ -236,74 +402,33 @@
                                             <thead>
                                                 <tr>
                                                     <th>Nº</th>
-                                                    <th>Estado</th>
-                                                    <th>Capacidad</th>
-                                                    <th>Camas</th>
-                                                    <th>Precio</th>
-                                                    <th>Descripcion</th>
+                                                    <th>Fecha</th>
+                                                    <th>Cliente</th>
+                                                    <th>Arribo</th>
+                                                    <th>Salida</th>
                                                     <th>Acción</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
                                                     <th>Nº</th>
-                                                    <th>Estado</th>
-                                                    <th>Capacidad</th>
-                                                    <th>Camas</th>
-                                                    <th>Precio</th>
-                                                    <th>Descripcion</th>
+                                                    <th>Fecha</th>
+                                                    <th>Cliente</th>
+                                                    <th>Arribo</th>
+                                                    <th>Salida</th>
                                                     <th>Acción</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <tr>
                                                     <td>260</td>
-                                                    <td>disponible</td>
-                                                    <td>4</td>
-                                                    <td>2</td>
-                                                    <td>Dia $23.60</td>
-                                                    <td>
-                                                        <textarea class="form-control ta-readonly" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, reprehenderit!</textarea>
-                                                    </td>
+                                                    <td>12/01/2017 12:54</td>
+                                                    <td><span>Torres</span><span>Daniel</span></td>
+                                                    <td>12/04/2017 14:30</td>
+                                                    <td>20/04/2017 07:00</td>
                                                     <td>
                                                         <div class="tab-col-botones">
                                                             <button type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
-                                                            <button type="button" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                            <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>260</td>
-                                                    <td>disponible</td>
-                                                    <td>4</td>
-                                                    <td>2</td>
-                                                    <td>Dia $23.60</td>
-                                                    <td>
-                                                        <textarea class="form-control ta-readonly" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, reprehenderit!</textarea>
-                                                    </td>
-                                                    <td>
-                                                        <div class="tab-col-botones">
-                                                            <button type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
-                                                            <button type="button" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                            <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>260</td>
-                                                    <td>disponible</td>
-                                                    <td>4</td>
-                                                    <td>2</td>
-                                                    <td>Dia $23.60</td>
-                                                    <td>
-                                                        <textarea class="form-control ta-readonly" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, reprehenderit!</textarea>
-                                                    </td>
-                                                    <td>
-                                                        <div class="tab-col-botones">
-                                                            <button type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
-                                                            <button type="button" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                            <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                                         </div>
                                                     </td>
                                                 </tr>

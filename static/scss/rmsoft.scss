@@ -231,8 +231,9 @@ a {
 /*						Estilos Pagina Principal Inicio	 								*/
 /****************************************************************************************/
 .background {
-	background: url($imagen_mobil) no-repeat center top;
+	background: url($imagen_escritorio) no-repeat center top;
 	background-size: cover;
+	background-attachment: fixed;
 	background-position: center;
 	.container-inicio, .container-login {
 		padding-top: 2rem;
@@ -240,62 +241,46 @@ a {
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
-		.navbar {
-			background-color: $navbar_principal;
-			color: $texto_claro;
-			padding: 0.6rem 0;
-			.container {
-				display: flex;
-				align-items: center;
-				flex-wrap: wrap;
-				.boton-ol-principal {
-					padding: 8px 1.2rem;
-					margin-left: auto;
-					margin-right: 1.8rem;
-				}
-				.boton-ol-principal:active {
+		.navbar-inicio {
+			.navbar {
+				background-color: $navbar_principal;
+				padding: 0.6rem 0;
+				.container {
+					padding: 0 1rem;
+					.navbar-toggler {
+						color: $texto_claro;
+						font-size: 1.8rem;
+						padding: .3rem .75rem;
+						margin-top: .2rem;
+						background-color: $primario;
+					}
+					.opciones-navbar {
 
-				}
-				.boton-menu {
-					border: 0;
-					border-radius: 4px;
-					font-size: 1.8rem;
-					margin: 0;
-					padding: 0 0.7rem;
-					background-color: $primario;
-					color: $texto_claro;
-				}
-				.boton-menu:hover, .boton-menu:focus {
-					outline: none;
-				}
-				.menu {
-					flex: 1 1 100%;
-					ul {
+					}
+					.navbar-brand {
 						padding: 0;
-						list-style: none;
-						margin: 1rem 0 0 0;
-						text-transform: uppercase;
-						li {
-							a {
-								color: $texto_claro;
-								text-decoration: none;
-								display: block;
-								padding: .6rem 0;
-								border-top: 1px solid $secundario;
-							}
-							a:hover {
-								color: $primario;
-							}
-						}
-						li.active{
-							a {
-								color: $primario;
+					}
+					.opciones-navbar {
+						margin-left: auto;
+					}
+					.navbar-collapse {
+						width: auto;
+						.navbar-nav {
+							.nav-item {
+								.nav-link {
+									font-size: 1.1rem;
+									padding: .5rem 1rem;
+									margin-left: 1.4rem;
+								}
+								.nav-link:hover {
+									color: $primario;
+								}				
 							}
 						}
 					}
 				}
 			}
-		} //Fin .navbar
+		}
 		.principal {
 			margin: auto 0;
 			color: $texto_claro;
@@ -317,7 +302,8 @@ a {
 				}
 				.boton-lg {
 					font-size: 1.3rem;
-					padding: 1rem 1.8rem;
+					padding: .7rem 2.4rem;
+					border: 1px solid $secundario;
 				}
 			}
 		}//Fin .principal
@@ -332,24 +318,66 @@ a {
 	}//Fin .container-inicio
 }
 #servicios{
-	background-color: $primario;
+	background-color: $texto_oscuro;
 	color: $texto_claro;
-	display: flex;
 	.container {
+		padding-bottom: 1.2rem;
 		.titulo {
-			margin: 2rem 0;
+			padding: 2rem 0;
+			color: $secundario;
+		}
+		.row {
+			margin-bottom: 2rem;
+			.texto-servicios {
+				font-size: 1.2rem;
+				text-align: justify;
+			}
+			.container-carousel {
+				margin-left: auto;
+				width: 80%;
+				.carousel {
+					margin-left: auto;
+					margin-right: 0;
+					img {
+						height: 250px;
+					}
+				}
+				
+			}
 		}
 	}
 }
 #contacto{
-	display: flex;
 	.container {
+		padding-bottom: 1.2rem;
 		.titulo {
 			margin: 2rem 0;
 		}
+		.texto-contacto {
+			.fila-contacto {
+				margin-bottom: 1.5rem;
+				h5 {
+					color: $primario;
+					margin: 0;
+				}
+			}
+		}
 	}
 }
-.pie-pagina{
+#mapa {
+	height: 300px;
+	iframe {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	iframe.click {
+		pointer-events: auto;
+	}
+} 
+#pie{
 	background-color: $navbar_principal;
 	color: $texto_claro;
 	padding: 1rem 0;
@@ -360,75 +388,77 @@ a {
 	}
 }
 // <------------- Medias Query ---------------->
-// 576px >>>
-@media (min-width: 576px) {
-	.background {
-		background: url($imagen_escritorio) no-repeat center top;
-		background-size: cover;
-		background-position: center;
-		.container-inicio, .container-login {
-			.navbar {
-				.container {
-					.menu {
-						height: auto !important;
-						display: block;
-						flex: 0 1 30%;
-						ul {
-							display: flex;
-							margin: 0;
-							li {
-								flex: 1 1 100%;
-								a {
-									margin: 0 .4rem;
-									padding: .4rem 0;
-									text-transform: capitalize;
-									border-top: none;
-								}
-								a:hover {
-									color: $primario;
-									border-bottom: 1px solid $secundario;
-								}
-							}
-							li.active{
-								a {
-									color: $primario;
-									border-bottom: 1px solid $secundario;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}		
-}
 // 768px <<<
 @media (max-width: 768px) {
 	.container-inicio {
-		.navbar {
+		.navbar-inicio .navbar{
 			padding: 0.4rem 0;
 			.container {
 				width: 600px;
 				max-width: 100%;
+				.opciones-navbar {
+					float: right;
+					margin-top: .3rem;
+					margin-right: 4.5rem;
+				}
 			}
 		}
 		.principal .container {
 			.denominacion {
-				margin-top: 1rem;
-				font-size: 2.1rem;
-				margin-bottom: 0;
+				margin-top: 1.5rem !important; 
+				font-size: 2.1rem !important;
+				margin-bottom: 0 !important;
 			}
 			.titulo {
-				margin: .8rem 0;
-				font-size: 4.6rem;
+				margin: .8rem 0 !important;
+				font-size: 4.4rem !important;
 			}
 			.descripcion {
-				font-size: 1.1rem;
-				margin-bottom: 2.2rem;
+				font-size: 1rem !important;
+				margin-bottom: 2.2rem !important;
 			}
-			.boton-ol-principal {
-				font-size: 1.2rem;
-				padding: .8rem .8rem;
+			.boton-lg {
+				font-size: 1rem !important;
+				padding: .7rem 2.4rem;
+				border: 1px solid $secundario;
+			}
+		}
+	}
+	#servicios{
+		.container {
+			.titulo {
+				padding: 2rem 0;
+			}
+		}
+	}
+	#contacto {
+		.container {
+			.texto-contacto {
+				.fila-contacto {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}
+// 576px <<<
+@media (max-width: 576px) {
+	.background {
+		background: url($imagen_mobil) no-repeat center top;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+	}	
+}
+// 350px <<<
+@media (max-width: 350px) {
+	.container-inicio {
+		.principal .container {
+			.denominacion {
+				font-size: 2rem !important;
+			}
+			.descripcion {
+				margin-bottom: 1rem !important;
 			}
 		}
 	}
@@ -598,9 +628,10 @@ a {
 				border-bottom: 1px solid $secundario;
 				display: flex;
 				justify-content: end;
-				.foto {
+				.foto-usuario {
 					align-self: center;
 					width: 80px;
+					height: 80px;
 					margin-right: 1.4rem;
 					background-color: $texto_claro;
 					border: 3px solid $secundario;
@@ -611,10 +642,13 @@ a {
 					display: flex;
 					flex-direction: column;
 					.nombre {
-						font-size: 1.2rem;
+						font-size: 1.1rem;
 						text-decoration: none;
 						color: $texto_claro;
 						margin-bottom: .2rem;
+						span {
+							margin: 0 .2rem;
+						}
 					}
 					.rol {
 						font-size: .9rem;
@@ -1096,6 +1130,7 @@ a {
 							button {
 								height: 2.45rem;
 								flex: 1 1 auto;
+								max-width: 10rem;
 							}
 						}
 					}
@@ -1169,7 +1204,7 @@ a {
 .container-sistema .principal .contenido {
 	.panel {
 		.cuerpo {
-			.datos-habitacion {
+			.datos-usuario {
 				margin-bottom: 1rem;
 				padding: .5rem 1rem;
 				.input-subir-imagen {
@@ -1185,6 +1220,26 @@ a {
 				.habitacion-form-precio {
 					display: flex;
 					
+				}
+			}
+		}
+	}
+}
+/****************************************************************************************/
+
+/****************************************************************************************/
+/*									Estilos pagina Configuracion								*/
+/****************************************************************************************/
+.container-sistema .principal .contenido {
+	.panel {
+		.cuerpo {
+			.datos-habitacion {
+				.imagen-logo-empresa {
+					padding: 0 1rem;
+					text-align: center;
+					#mostrador {
+						max-height: 240px;
+					}
 				}
 			}
 		}
