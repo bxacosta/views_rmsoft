@@ -14,6 +14,12 @@ body {
 @font-face {
   font-family: 'FontAwesome';
   src: local("FontAwesome"); }
+.form-control[readonly] {
+  background-color: #fafafa; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
 .marca {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,6 +36,9 @@ body {
     color: #f2f2f2;
     font-size: 1.8rem;
     font-family: Andada, serif; }
+
+.marca:hover, .marca:focus {
+  text-decoration: none; }
 
 .panel {
   margin-bottom: 1rem;
@@ -404,7 +413,8 @@ a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        margin-bottom: 1rem; }
         .container-login .principal .container .panel .cuerpo .contenido .opciones a {
           -webkit-box-flex: 1;
               -ms-flex: 1 1 auto;
@@ -430,17 +440,20 @@ a {
           background-color: transparent; }
           .container-login .principal .container .panel .cuerpo .contenido .opciones .active i {
             color: #C12C42; }
-      .container-login .principal .container .panel .cuerpo .contenido .login, .container-login .principal .container .panel .cuerpo .contenido .registro {
+      .container-login .principal .container .panel .cuerpo .contenido .login {
         padding: 0 1rem;
-        padding-top: 2rem; }
-        .container-login .principal .container .panel .cuerpo .contenido .login .col-form-label, .container-login .principal .container .panel .cuerpo .contenido .registro .col-form-label {
+        padding-top: .4rem; }
+        .container-login .principal .container .panel .cuerpo .contenido .login .col-form-label {
           padding-right: 0; }
-        .container-login .principal .container .panel .cuerpo .contenido .login button, .container-login .principal .container .panel .cuerpo .contenido .registro button {
+        .container-login .principal .container .panel .cuerpo .contenido .login button {
           padding: .8rem 0;
           margin-top: .5rem; }
       .container-login .principal .container .panel .cuerpo .contenido .registro {
-        padding-top: 1.5rem; }
+        padding: 0 1rem; }
+        .container-login .principal .container .panel .cuerpo .contenido .registro .col-form-label {
+          padding-right: 0; }
         .container-login .principal .container .panel .cuerpo .contenido .registro button {
+          padding: .8rem 0;
           margin-top: 0; }
 
 @media (max-width: 992px) {
@@ -527,8 +540,10 @@ a {
             color: #f2f2f2;
             margin-bottom: .2rem; }
             .container-sistema .background-sidebar .sidebar .usuario .texto .nombre span {
-              margin: 0 .2rem; }
+              margin: 0 .2rem;
+              text-transform: capitalize; }
           .container-sistema .background-sidebar .sidebar .usuario .texto .rol {
+            text-transform: capitalize;
             font-size: .9rem;
             color: #C9B76A; }
       .container-sistema .background-sidebar .sidebar .menu-sidebar .nav {
@@ -601,19 +616,22 @@ a {
             .container-sistema .principal .navbar .container-fluid .menu ul li {
               font-size: 1.05rem;
               margin-left: 2rem; }
-              .container-sistema .principal .navbar .container-fluid .menu ul li a {
+              .container-sistema .principal .navbar .container-fluid .menu ul li form button {
+                background: transparent;
+                border: none; }
+              .container-sistema .principal .navbar .container-fluid .menu ul li .menu-item {
                 color: #f2f2f2;
                 text-decoration: none; }
-                .container-sistema .principal .navbar .container-fluid .menu ul li a i {
+                .container-sistema .principal .navbar .container-fluid .menu ul li .menu-item i {
                   font-size: 1.3rem;
                   color: #C12C42; }
-                .container-sistema .principal .navbar .container-fluid .menu ul li a .fa-user {
+                .container-sistema .principal .navbar .container-fluid .menu ul li .menu-item .fa-user {
                   margin: 0 3px; }
-                .container-sistema .principal .navbar .container-fluid .menu ul li a span {
+                .container-sistema .principal .navbar .container-fluid .menu ul li .menu-item span {
                   margin-left: .3rem; }
-              .container-sistema .principal .navbar .container-fluid .menu ul li a:hover {
+              .container-sistema .principal .navbar .container-fluid .menu ul li .menu-item:hover {
                 color: #d1354c; }
-            .container-sistema .principal .navbar .container-fluid .menu ul li.active a {
+            .container-sistema .principal .navbar .container-fluid .menu ul li.active .menu-item {
               color: #C12C42; }
       .container-sistema .principal .navbar #menu-mobil ul {
         text-align: center;
@@ -860,7 +878,7 @@ a {
       .container-sistema .principal .navbar .container-fluid .menu ul li {
         padding: .3rem .6rem;
         border-radius: 6px; }
-        .container-sistema .principal .navbar .container-fluid .menu ul li a i {
+        .container-sistema .principal .navbar .container-fluid .menu ul li .menu-item i {
           font-size: 1.4rem;
           color: #f2f2f2; }
       .container-sistema .principal .navbar .container-fluid .menu ul li.active {
@@ -1019,11 +1037,16 @@ a {
     padding: 0 1rem;
     text-align: center; }
     .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .imagen-persona #mostrador {
-      max-height: 200px; }
+      max-height: 240px; }
   .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .habitacion-form-precio {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .estatico h5 {
+    color: #C12C42; }
+  .container-sistema .principal .contenido .panel .cuerpo .datos-usuario .estatico span {
+    font-size: 1.1rem;
+    text-transform: capitalize; }
 
 /****************************************************************************************/
 /****************************************************************************************/

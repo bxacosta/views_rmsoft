@@ -71,13 +71,13 @@
                     <div class="menu">
                         <ul class="">
                             <li class="active">
-                                <a href="configuracion.html"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hidden-xs-down"> Configuración</span></a>
+                                <a href="configuracion.html" class="menu-item"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hidden-xs-down"> Configuración</span></a>
                             </li>
                             <li class="">
-                                <a href="cuenta.html"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs-down"> Mi Cuenta</span></a>
+                                <a href="cuenta.html" class="menu-item"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs-down"> Mi Cuenta</span></a>
                             </li>
                             <li class="">
-                                <a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hidden-xs-down"> Cerrar Sesión</span></a>
+                                <a href="login.html" class="menu-item"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hidden-xs-down"> Cerrar Sesión</span></a>
                             </li>
                         </ul>
                     </div>
@@ -146,10 +146,24 @@
                                     <div class="col-8 col-md-5">
                                         <input type="text" class="form-control" name="numero" placeholder="Nombre"/>
                                     </div>
-                                    <label for="denominacion" class="col-md-2 col-form-label hidden-sm-down">Porcentaje:</label>
+                                    <label class="col-md-2 col-form-label hidden-sm-down">Porcentaje %:</label>
                                     <div class="col-4 col-md-3">
-                                        <input type="number" class="form-control" name="capacidad" placeholder="Porcentaje"/>
+                                        <input type="number" class="form-control" name="capacidad" placeholder="Porcentaje %"/>
                                     </div> 
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nombre" class="col-md-2 col-form-label hidden-sm-down">Condición:</label>
+                                    <div class="col-8 col-md-5">
+                                        <select class="form-control">
+                                            <option>Todos</option>
+                                            <option>Valor de orden mayor a</option>
+                                            <option>Valor de orden igual a</option>
+                                        </select>
+                                    </div>
+                                    <label class="col-md-2 col-form-label hidden-sm-down">Valor $:</label>
+                                    <div class="col-4 col-md-3">
+                                        <input class="form-control input-fehca" type="number" placeholder="Valor $" />
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="telefono" class="col-md-2 col-form-label">Desde:</label>
@@ -238,15 +252,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="descripcion" class="col-12 col-md-3 col-xl-2 col-form-label hidden-sm-down">Servicios:</label>
+                                    <label for="descripcion" class="col-12 col-md-3 col-xl-2 col-form-label hidden-sm-down">Detalle Servicio:</label>
                                     <div class="col-12 col-md-3 col-xl-10">
-                                        <textarea class="form-control" rows="2" placeholder="Servicios"></textarea>
+                                        <textarea class="form-control" rows="2" placeholder="Detalle Servicio"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="mapa" class="col-12 col-md-3 col-xl-2 col-form-label hidden-sm-down">Mapa:</label>
+                                    <label for="mapa" class="col-12 col-md-3 col-xl-2 col-form-label hidden-sm-down">Mapa url:</label>
                                     <div class="col-12 col-md-3 col-xl-10">
-                                        <textarea class="form-control" rows="3" placeholder="<iframe>"></textarea>
+                                        <textarea class="form-control" rows="3" placeholder="Mapa url"></textarea>
                                     </div>
                                 </div>
                             </form>

@@ -27,17 +27,17 @@
     <div class="container-sistema">
         <div class="background-sidebar hidden-sm-down">
             <nav class="sidebar" role="navigation">
-                <div class="marca">
-                    <a href="principal.html" class="logo"><img src="../static/images/logo.svg" alt="Logo"/></a>
-                    <a href="principal.html" class="texto hidden-xs-down">Libertad</a>
-                </div>
+                <a href="principal.html" class="marca">
+                    <img class="logo" src="../static/images/logo.svg" alt="Logo"/>
+                    <span class="texto hidden-xs-down">Libertad</span>
+                </a>
                 <div class="usuario">
                     <a href="cuenta.html">
                         <img src="../static/images/default-user.jpg" class="foto-usuario rounded-circle hidden-md-down" alt="Usuario"/>
                     </a>
                     <div class="texto">
-                        <a href="#" class="nombre"><span>Apellido</span><span>Nombre</span></a>
-                        <span class="rol">Administrador</span>
+                        <a href="#" class="nombre"><span>apellido</span> <span>nombre</span></a>
+                        <span class="rol">administrador</span>
                     </div>
                 </div>
                 <div class="menu-sidebar">
@@ -71,13 +71,15 @@
                     <div class="menu">
                         <ul class="">
                             <li class="">
-                                <a href="configuracion.html"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hidden-xs-down"> Configuración</span></a>
+                                <a href="configuracion.html" class="menu-item"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hidden-xs-down"> Configuración</span></a>
                             </li>
                             <li class="">
-                                <a href="cuenta.html"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs-down"> Mi Cuenta</span></a>
+                                <a href="cuenta.html" class="menu-item"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs-down"> Mi Cuenta</span></a>
                             </li>
                             <li class="">
-                                <a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hidden-xs-down"> Cerrar Sesión</span></a>
+                                <form action="login.html" method="POST">
+                                    <button class="menu-item" type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hidden-xs-down"> Cerrar Sesión</span></button>
+                                </form>
                             </li>
                         </ul>
                     </div>
